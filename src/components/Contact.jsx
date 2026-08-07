@@ -52,7 +52,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{t.contact.emailLabel}</p>
-                  <p className="text-slate-300 text-sm font-medium mt-0.5">hello@paradisanalytics.com</p>
+                  <a href="mailto:hello@paradisanalytics.com" className="block text-slate-300 text-sm font-medium mt-0.5 hover:text-[#00d2ff] transition-colors">hello@paradisanalytics.com</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -61,7 +61,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{t.contact.phoneLabel}</p>
-                  <p className="text-slate-300 text-sm font-medium mt-0.5">+1 (787) 000-0000</p>
+                  <a href="tel:+17870000000" className="block text-slate-300 text-sm font-medium mt-0.5 hover:text-[#00d2ff] transition-colors">+1 (787) 000-0000</a>
                 </div>
               </div>
             </div>

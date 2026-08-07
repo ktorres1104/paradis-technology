@@ -54,21 +54,6 @@ export default function About() {
                 ))}
               </ul>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl border border-white/5 text-center" style={{ background: 'rgba(255,255,255,0.025)' }}>
-                <p className="text-3xl font-black text-white">
-                  3<span className="text-[#00d2ff]">+</span>
-                </p>
-                <p className="text-xs text-slate-400 mt-1 font-medium">{t.about.years}</p>
-              </div>
-              <div className="p-5 rounded-2xl border border-white/5 text-center" style={{ background: 'rgba(255,255,255,0.025)' }}>
-                <p className="text-3xl font-black text-white">
-                  10<span className="text-[#00d2ff]">+</span>
-                </p>
-                <p className="text-xs text-slate-400 mt-1 font-medium">{t.about.industries}</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

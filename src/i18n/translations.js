@@ -5,6 +5,7 @@ export const translations = {
       demos: 'Demos',
       about: 'About',
       process: 'Process',
+      faq: 'FAQ',
       contact: 'Contact',
       getStarted: 'Get Started',
     },
@@ -16,12 +17,6 @@ export const translations = {
         'We help small and medium businesses in Puerto Rico unlock the power of AI and data—without the complexity. Practical solutions, real results.',
       ctaPrimary: 'Start Your Journey',
       ctaSecondary: 'View Services',
-      stats: [
-        { value: 50, suffix: '+', label: 'Businesses Served' },
-        { value: 98, suffix: '%', label: 'Client Satisfaction' },
-        { value: 120, suffix: '+', label: 'Projects Completed' },
-        { value: 5, suffix: 'M+', label: 'Data Points Processed Daily' },
-      ],
     },
     services: {
       eyebrow: 'What We Do',
@@ -76,8 +71,6 @@ export const translations = {
         'Puerto Rico–based team that understands the local market',
         'Ongoing partnership, not a one-time project',
       ],
-      years: 'Years of experience',
-      industries: 'Industries served',
     },
     process: {
       eyebrow: 'How It Works',
@@ -106,6 +99,37 @@ export const translations = {
         },
       ],
       cta: 'Start with a Free Discovery Call',
+    },
+    faq: {
+      eyebrow: 'Questions',
+      title: 'Frequently Asked Questions',
+      subtitle: "Still not sure if this is for you? Here's what most people ask before reaching out.",
+      items: [
+        {
+          q: 'How much does this cost?',
+          a: "It depends on what we'd actually be doing together. A consulting engagement, a fixed-scope product build, and grant-funded work are priced very differently — we figure out which one fits and quote it on your discovery call, not before.",
+        },
+        {
+          q: 'How long does a typical project take?',
+          a: 'It depends on scope, but most engagements move from discovery to a working pilot in a matter of weeks, not months. We\'ll give you a real timeline once we understand what you need.',
+        },
+        {
+          q: 'Do I need a technical team or a data scientist on staff?',
+          a: "No. That's the whole point — we speak your language, not the other way around. You don't need any technical background to work with us.",
+        },
+        {
+          q: 'Do you work in Spanish?',
+          a: 'Yes. We work fluently in both English and Spanish — this website included. Our team is Puerto Rico–based and understands the local market.',
+        },
+        {
+          q: 'Do I have to be based in Puerto Rico?',
+          a: "Puerto Rico is our focus, but not our limit — we also serve businesses across the U.S. Wherever you're based, the same flexible approach applies.",
+        },
+        {
+          q: "I'm not sure what I actually need — can you help with that?",
+          a: 'That\'s exactly what the discovery call is for. Try our interactive tools above, or just reach out — we\'ll ask a few questions and point you in the right direction.',
+        },
+      ],
     },
     contact: {
       eyebrow: 'Get In Touch',
@@ -325,6 +349,7 @@ export const translations = {
       demos: 'Demos',
       about: 'Nosotros',
       process: 'Proceso',
+      faq: 'Preguntas',
       contact: 'Contacto',
       getStarted: 'Comenzar',
     },
@@ -336,12 +361,6 @@ export const translations = {
         'Ayudamos a pequeñas y medianas empresas en Puerto Rico a aprovechar el poder de la IA y los datos—sin la complejidad. Soluciones prácticas, resultados reales.',
       ctaPrimary: 'Comienza Tu Camino',
       ctaSecondary: 'Ver Servicios',
-      stats: [
-        { value: 50, suffix: '+', label: 'Negocios Atendidos' },
-        { value: 98, suffix: '%', label: 'Satisfacción del Cliente' },
-        { value: 120, suffix: '+', label: 'Proyectos Completados' },
-        { value: 5, suffix: 'M+', label: 'Datos Procesados al Día' },
-      ],
     },
     services: {
       eyebrow: 'Qué Hacemos',
@@ -396,8 +415,6 @@ export const translations = {
         'Equipo basado en Puerto Rico que entiende el mercado local',
         'Una relación continua, no un proyecto de una sola vez',
       ],
-      years: 'Años de experiencia',
-      industries: 'Industrias atendidas',
     },
     process: {
       eyebrow: 'Cómo Funciona',
@@ -426,6 +443,37 @@ export const translations = {
         },
       ],
       cta: 'Comienza con una Llamada de Descubrimiento Gratis',
+    },
+    faq: {
+      eyebrow: 'Preguntas',
+      title: 'Preguntas Frecuentes',
+      subtitle: '¿Todavía no sabes si esto es para ti? Esto es lo que la mayoría pregunta antes de contactarnos.',
+      items: [
+        {
+          q: '¿Cuánto cuesta esto?',
+          a: 'Depende de qué vayamos a hacer juntos. Una consultoría, el desarrollo de un producto de alcance fijo, y un proyecto financiado por subvención tienen precios muy distintos — definimos cuál aplica y te damos una cotización en la llamada de descubrimiento, no antes.',
+        },
+        {
+          q: '¿Cuánto tiempo toma un proyecto típico?',
+          a: 'Depende del alcance, pero la mayoría de los proyectos pasan del descubrimiento a un piloto funcional en cuestión de semanas, no meses. Te damos un tiempo real una vez entendamos qué necesitas.',
+        },
+        {
+          q: '¿Necesito un equipo técnico o un científico de datos en mi negocio?',
+          a: 'No. Ese es precisamente el punto — nosotros hablamos tu idioma, no al revés. No necesitas ningún trasfondo técnico para trabajar con nosotros.',
+        },
+        {
+          q: '¿Trabajan en español?',
+          a: 'Sí. Trabajamos con fluidez en inglés y español — esta misma página incluida. Nuestro equipo está basado en Puerto Rico y entiende el mercado local.',
+        },
+        {
+          q: '¿Tengo que estar en Puerto Rico?',
+          a: 'Puerto Rico es nuestro enfoque, pero no nuestro límite — también atendemos negocios en todo Estados Unidos. Donde sea que estés, aplicamos el mismo enfoque flexible.',
+        },
+        {
+          q: 'No estoy seguro/a de qué necesito — ¿me pueden ayudar con eso?',
+          a: 'Para eso es exactamente la llamada de descubrimiento. Prueba nuestras herramientas interactivas arriba, o simplemente escríbenos — te haremos algunas preguntas y te orientamos.',
+        },
+      ],
     },
     contact: {
       eyebrow: 'Contáctanos',

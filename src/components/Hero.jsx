@@ -1,50 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiArrowRight, HiChevronDown } from 'react-icons/hi'
 import { useLanguage } from '../i18n/LanguageContext'
 
-function useCountUp(target, duration = 2000, start = false) {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    if (!start) return
-    let startTime = null
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp
-      const progress = Math.min((timestamp - startTime) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.floor(eased * target))
-      if (progress < 1) requestAnimationFrame(step)
-    }
-    requestAnimationFrame(step)
-  }, [target, duration, start])
-  return count
-}
-
-function StatCard({ value, suffix, label, animate }) {
-  const count = useCountUp(value, 2200, animate)
-  return (
-    <div className="flex flex-col items-center gap-1">
-      <span className="text-3xl md:text-4xl font-black text-white">
-        {count}<span className="text-[#00d2ff]">{suffix}</span>
-      </span>
-      <span className="text-xs md:text-sm text-slate-400 font-medium text-center">{label}</span>
-    </div>
-  )
-}
-
 export default function Hero() {
   const { t } = useLanguage()
-  const [animateStats, setAnimateStats] = useState(false)
-  const statsRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setAnimateStats(true) },
-      { threshold: 0.3 }
-    )
-    if (statsRef.current) observer.observe(statsRef.current)
-    return () => observer.disconnect()
-  }, [])
 
   const container = {
     hidden: {},
@@ -117,17 +76,6 @@ export default function Hero() {
             >
               {t.hero.ctaSecondary}
             </button>
-          </motion.div>
-
-          <motion.div
-            ref={statsRef}
-            variants={item}
-            className="mt-12 w-full max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-8 px-8 rounded-2xl border border-white/5 bg-white/2"
-            style={{ background: 'rgba(255,255,255,0.02)' }}
-          >
-            {t.hero.stats.map((s) => (
-              <StatCard key={s.label} {...s} animate={animateStats} />
-            ))}
           </motion.div>
         </motion.div>
       </div>

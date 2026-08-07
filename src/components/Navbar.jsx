@@ -11,6 +11,7 @@ export default function Navbar() {
     { label: t.nav.demos, href: '#demos' },
     { label: t.nav.about, href: '#about' },
     { label: t.nav.process, href: '#process' },
+    { label: t.nav.faq, href: '#faq' },
     { label: t.nav.contact, href: '#contact' },
   ]
   const [scrolled, setScrolled] = useState(false)

@@ -4,6 +4,7 @@ import Services from './components/Services'
 import Demos from './components/Demos'
 import About from './components/About'
 import Process from './components/Process'
+import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { LanguageProvider } from './i18n/LanguageContext'
@@ -20,6 +21,7 @@ export default function App() {
           <Demos />
           <About />
           <Process />
+          <FAQ />
           <Contact />
         </main>
         <Footer />
