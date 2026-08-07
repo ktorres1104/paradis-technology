@@ -56,6 +56,22 @@ export default function About() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-8 p-8 md:p-10 rounded-2xl border border-white/5"
+          style={{ background: 'rgba(255,255,255,0.025)' }}
+        >
+          <h3 className="text-white font-bold text-xl mb-5">{t.about.founderHeading}</h3>
+          <div className="space-y-4 max-w-3xl">
+            {t.about.founderParagraphs.map((p) => (
+              <p key={p} className="text-slate-400 leading-relaxed">{p}</p>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

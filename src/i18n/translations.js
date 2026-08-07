@@ -71,6 +71,12 @@ export const translations = {
         'Puerto Rico–based team that understands the local market',
         'Ongoing partnership, not a one-time project',
       ],
+      founderHeading: 'Who’s Behind Paradis',
+      founderParagraphs: [
+        'Behind Paradis is a data scientist with a Master’s in Data Science and a background in Applied Mathematics and Physics — training built for precision, not guesswork.',
+        'That foundation has been tested across health insurance, finance, education, payment operations, and digital marketing — building machine learning models, statistical models, and AI-powered products that turn data into real business decisions, not just reports.',
+        'Today, that same rigor carries into building machine learning products that increase efficiency at a corporate level across different business functions — the same standard behind every solution Paradis delivers: built to hold up under real conditions, not just look good in a demo.',
+      ],
     },
     process: {
       eyebrow: 'How It Works',
@@ -414,6 +420,12 @@ export const translations = {
         'Cada solución se adapta a cómo funciona tu negocio—no un paquete rígido de talla única',
         'Equipo basado en Puerto Rico que entiende el mercado local',
         'Una relación continua, no un proyecto de una sola vez',
+      ],
+      founderHeading: 'Quién Está Detrás de Paradis',
+      founderParagraphs: [
+        'Detrás de Paradis hay un científico de datos con una maestría en Data Science y una base en Matemática Aplicada y Física — una formación pensada para la precisión, no para las corazonadas.',
+        'Esa base se ha puesto a prueba en seguros de salud, finanzas, educación, operaciones de pago y mercadeo digital — construyendo modelos de machine learning, modelos estadísticos y productos impulsados por IA que convierten datos en decisiones reales de negocio, no solo en reportes.',
+        'Hoy, ese mismo rigor se traduce en la creación de productos de machine learning que aumentan la eficiencia a nivel corporativo en distintos departamentos del negocio — el mismo estándar detrás de cada solución que entrega Paradis: construida para funcionar en condiciones reales, no solo para verse bien en una demo.',
       ],
     },
     process: {
