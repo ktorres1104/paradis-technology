@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { HiCheckCircle, HiEnvelope, HiPhone } from 'react-icons/hi2'
 
 const services = [
@@ -87,7 +87,7 @@ export default function Contact() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="p-8 rounded-2xl border border-white/5" style={{ background: 'rgba(255,255,255,0.025)' }}>
-              <AnimatePresence mode="wait">
+              <>
                 {submitted ? (
                   <motion.div
                     key="success"
@@ -116,7 +116,6 @@ export default function Contact() {
                   <motion.form
                     key="form"
                     initial={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
                     onSubmit={handleSubmit}
                     className="space-y-4"
                   >
@@ -211,7 +210,7 @@ export default function Contact() {
                     </p>
                   </motion.form>
                 )}
-              </AnimatePresence>
+              </>
             </div>
           </motion.div>
         </div>

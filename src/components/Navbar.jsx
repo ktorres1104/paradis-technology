@@ -5,6 +5,7 @@ import PalmLogo from './PalmLogo'
 
 const links = [
   { label: 'Services', href: '#services' },
+  { label: 'Demos', href: '#demos' },
   { label: 'About', href: '#about' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
