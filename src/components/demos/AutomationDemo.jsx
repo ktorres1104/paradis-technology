@@ -5,39 +5,30 @@ import {
 } from 'react-icons/hi2'
 import useAutoTimeline from './useAutoTimeline'
 import PlayerChrome from './PlayerChrome'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 // Two example flows shown back to back, to give a sense of range rather than
-// a single fixed use case.
-const flows = [
-  {
-    name: 'Bot de WhatsApp → CRM',
-    nodes: [
-      { icon: HiChatBubbleLeftRight, title: 'Mensaje recibido', desc: 'Llega por WhatsApp o Instagram' },
-      { icon: HiCpuChip, title: 'Clasifica intención', desc: 'La IA entiende qué necesita el cliente' },
-      { icon: HiCircleStack, title: 'Consulta el sistema', desc: 'Revisa inventario, calendario o CRM' },
-      { icon: HiSparkles, title: 'Genera respuesta', desc: 'Redacta con el tono de tu marca' },
-      { icon: HiCheckCircle, title: 'Actualiza y responde', desc: 'Guarda el registro y contesta al cliente' },
-    ],
-  },
-  {
-    name: 'Nueva orden → Reporte diario',
-    nodes: [
-      { icon: HiShoppingBag, title: 'Nueva orden', desc: 'Se registra en la tienda o el POS' },
-      { icon: HiCircleStack, title: 'Verifica inventario', desc: 'Descuenta unidades automáticamente' },
-      { icon: HiClipboardDocumentList, title: 'Actualiza hoja de cálculo', desc: 'Google Sheets siempre al día' },
-      { icon: HiBellAlert, title: 'Notifica al equipo', desc: 'Avisa si algo está por agotarse' },
-      { icon: HiCheckCircle, title: 'Genera reporte diario', desc: 'Resumen automático cada noche' },
-    ],
-  },
+// a single fixed use case. Icons are positional and paired with translated
+// node text by index.
+const flowIcons = [
+  [HiChatBubbleLeftRight, HiCpuChip, HiCircleStack, HiSparkles, HiCheckCircle],
+  [HiShoppingBag, HiCircleStack, HiClipboardDocumentList, HiBellAlert, HiCheckCircle],
 ]
 
 const STEP_MS = 700
 const HOLD_MS = 1600
-const NODES_COUNT = flows[0].nodes.length
+const NODES_COUNT = flowIcons[0].length
 const FLOW_DURATION = STEP_MS * NODES_COUNT + HOLD_MS
-const TOTAL_DURATION = FLOW_DURATION * flows.length
+const TOTAL_DURATION = FLOW_DURATION * flowIcons.length
 
 export default function AutomationDemo() {
+  const { t } = useLanguage()
+  const a = t.demos.automation
+  const flows = a.flows.map((f, fi) => ({
+    ...f,
+    nodes: f.nodes.map((n, ni) => ({ ...n, icon: flowIcons[fi][ni] })),
+  }))
+
   const { elapsed, playing, toggle, restart, progress } = useAutoTimeline(TOTAL_DURATION)
 
   const flowIndex = Math.min(Math.floor(elapsed / FLOW_DURATION), flows.length - 1)
@@ -51,20 +42,18 @@ export default function AutomationDemo() {
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
       <div className="lg:col-span-2">
         <span className="inline-flex items-center gap-1.5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
-          <HiArrowPathRoundedSquare size={14} /> Automatizaciones n8n
+          <HiArrowPathRoundedSquare size={14} /> {a.eyebrow}
         </span>
         <h3 className="mt-3 text-2xl md:text-3xl font-black text-white tracking-tight">
-          Conecta tus herramientas, sin fricción
+          {a.title}
         </h3>
         <p className="mt-4 text-slate-400 leading-relaxed">
-          Observa cómo viaja la información paso a paso. Estos son dos ejemplos del tipo de flujo
-          que construimos con n8n para conectar WhatsApp, tu inventario, tu CRM y la IA — sin que
-          tengas que tocar código.
+          {a.subtitle}
         </p>
       </div>
 
       <div className="lg:col-span-3">
-        <PlayerChrome label={`Demo automático · ${flow.name}`} playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
+        <PlayerChrome label={a.demoLabel.replace('{name}', flow.name)} playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
           <div className="relative rounded-xl -m-2 p-2" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px)', backgroundSize: '18px 18px' }}>
             <div className="hidden md:block absolute top-9 left-9 right-9 h-px bg-white/10">
               {active >= 0 && (
@@ -115,10 +104,10 @@ export default function AutomationDemo() {
           <div className="mt-6 pt-5 border-t border-white/5 text-center">
             {done ? (
               <p className="text-sm text-emerald-400 font-semibold flex items-center justify-center gap-1.5">
-                <HiCheckCircle size={16} /> Automatización completada, sin intervención manual
+                <HiCheckCircle size={16} /> {a.doneText}
               </p>
             ) : (
-              <p className="text-sm text-slate-500">Este flujo corre solo, 24/7, sin que nadie lo tenga que operar manualmente.</p>
+              <p className="text-sm text-slate-500">{a.runningText}</p>
             )}
           </div>
         </PlayerChrome>

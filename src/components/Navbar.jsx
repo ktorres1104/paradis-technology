@@ -2,16 +2,17 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 import PalmLogo from './PalmLogo'
-
-const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'Demos', href: '#demos' },
-  { label: 'About', href: '#about' },
-  { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
-]
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function Navbar() {
+  const { language, toggleLanguage, t } = useLanguage()
+  const links = [
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.demos, href: '#demos' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.process, href: '#process' },
+    { label: t.nav.contact, href: '#contact' },
+  ]
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -58,22 +59,48 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={toggleLanguage}
+            aria-label="Switch language"
+            className="flex items-center rounded-full border border-white/10 p-0.5 text-xs font-bold cursor-pointer"
+          >
+            <span className={`px-2.5 py-1 rounded-full transition-colors duration-200 ${language === 'en' ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-400'}`}>
+              EN
+            </span>
+            <span className={`px-2.5 py-1 rounded-full transition-colors duration-200 ${language === 'es' ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-400'}`}>
+              ES
+            </span>
+          </button>
           <button
             onClick={() => handleNav('#contact')}
             className="px-5 py-2 rounded-lg text-sm font-semibold bg-[#00d2ff] text-[#07091a] hover:bg-[#00aacc] transition-colors duration-200 cursor-pointer"
           >
-            Get Started
+            {t.nav.getStarted}
           </button>
         </div>
 
-        <button
-          className="md:hidden text-white p-1 cursor-pointer"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
-        </button>
+        <div className="flex md:hidden items-center gap-3">
+          <button
+            onClick={toggleLanguage}
+            aria-label="Switch language"
+            className="flex items-center rounded-full border border-white/10 p-0.5 text-xs font-bold cursor-pointer"
+          >
+            <span className={`px-2 py-1 rounded-full transition-colors duration-200 ${language === 'en' ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-400'}`}>
+              EN
+            </span>
+            <span className={`px-2 py-1 rounded-full transition-colors duration-200 ${language === 'es' ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-400'}`}>
+              ES
+            </span>
+          </button>
+          <button
+            className="text-white p-1 cursor-pointer"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -99,7 +126,7 @@ export default function Navbar() {
                 onClick={() => handleNav('#contact')}
                 className="mt-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[#00d2ff] text-[#07091a] hover:bg-[#00aacc] transition-colors cursor-pointer w-full"
               >
-                Get Started
+                {t.nav.getStarted}
               </button>
             </div>
           </motion.div>

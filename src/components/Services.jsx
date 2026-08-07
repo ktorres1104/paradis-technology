@@ -7,44 +7,9 @@ import {
   HiCog6Tooth,
   HiClipboardDocumentList,
 } from 'react-icons/hi2'
+import { useLanguage } from '../i18n/LanguageContext'
 
-const services = [
-  {
-    icon: HiChartBar,
-    title: 'Analytics Products',
-    description:
-      'Custom dashboards and reporting tools that give you a clear, real-time view of what matters most in your business.',
-    tags: ['Dashboards', 'KPI Tracking', 'Data Viz'],
-  },
-  {
-    icon: HiLightBulb,
-    title: 'Data Science Insights & Predictions',
-    description:
-      'Transform raw business data into actionable predictions—from demand forecasting to customer behavior analysis.',
-    tags: ['Forecasting', 'ML Models', 'Trend Analysis'],
-  },
-  {
-    icon: HiCpuChip,
-    title: 'AI Integration & Custom Products',
-    description:
-      'Purpose-built AI tools tailored to your workflows—chatbots, recommendation engines, document processors, and more.',
-    tags: ['Generative AI', 'LLM Apps', 'Custom Tools'],
-  },
-  {
-    icon: HiCog6Tooth,
-    title: 'Operations Automation',
-    description:
-      'Eliminate repetitive manual tasks with intelligent automation that saves time, reduces errors, and scales with you.',
-    tags: ['Process Automation', 'Workflows', 'Integration'],
-  },
-  {
-    icon: HiClipboardDocumentList,
-    title: 'Data Consulting',
-    description:
-      'Strategic guidance on building your data infrastructure and roadmap—so every technology decision moves you forward.',
-    tags: ['Strategy', 'Architecture', 'Roadmapping'],
-  },
-]
+const icons = [HiChartBar, HiLightBulb, HiCpuChip, HiCog6Tooth, HiClipboardDocumentList]
 
 const container = {
   hidden: {},
@@ -57,6 +22,8 @@ const cardVariant = {
 }
 
 export default function Services() {
+  const { t } = useLanguage()
+  const services = t.services.items.map((item, i) => ({ ...item, icon: icons[i] }))
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
@@ -74,12 +41,12 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">What We Do</span>
+          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">{t.services.eyebrow}</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight">
-            Our Services
+            {t.services.title}
           </h2>
           <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
-            End-to-end data and AI solutions designed for businesses ready to grow smarter.
+            {t.services.subtitle}
           </p>
         </motion.div>
 
@@ -145,12 +112,12 @@ export default function Services() {
           className="mt-12 text-center"
         >
           <p className="text-slate-500 text-sm">
-            Not sure what you need?{' '}
+            {t.services.notSure}{' '}
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="text-[#00d2ff] hover:underline cursor-pointer"
             >
-              Let's talk about your goals.
+              {t.services.talkGoals}
             </button>
           </p>
         </motion.div>

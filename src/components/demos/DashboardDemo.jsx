@@ -3,33 +3,7 @@ import { motion } from 'framer-motion'
 import { HiPresentationChartBar, HiArrowTrendingUp, HiArrowTrendingDown, HiCheckCircle } from 'react-icons/hi2'
 import useAutoTimeline from './useAutoTimeline'
 import PlayerChrome from './PlayerChrome'
-
-const datasets = {
-  '7D': {
-    kpis: { revenue: 8420, orders: 312, avgTicket: 27, retention: 64 },
-    deltas: { revenue: 4.2, orders: 2.1, avgTicket: -1.4, retention: 1.8 },
-    bars: [
-      { label: 'Lun', value: 980 }, { label: 'Mar', value: 1120 }, { label: 'Mié', value: 890 },
-      { label: 'Jue', value: 1340 }, { label: 'Vie', value: 1780 }, { label: 'Sáb', value: 1620 },
-      { label: 'Dom', value: 690 },
-    ],
-  },
-  '30D': {
-    kpis: { revenue: 34900, orders: 1284, avgTicket: 27, retention: 58 },
-    deltas: { revenue: 11.6, orders: 8.4, avgTicket: 2.3, retention: -0.9 },
-    bars: [
-      { label: 'S1', value: 7200 }, { label: 'S2', value: 8100 }, { label: 'S3', value: 9400 },
-      { label: 'S4', value: 10200 },
-    ],
-  },
-  '90D': {
-    kpis: { revenue: 101300, orders: 3760, avgTicket: 27, retention: 61 },
-    deltas: { revenue: 18.9, orders: 15.2, avgTicket: 0.6, retention: 5.4 },
-    bars: [
-      { label: 'Mes 1', value: 29800 }, { label: 'Mes 2', value: 33100 }, { label: 'Mes 3', value: 38400 },
-    ],
-  },
-}
+import { useLanguage } from '../../i18n/LanguageContext'
 
 // Each period holds for HOLD_MS before the "recording" advances to the next.
 const PERIOD_ORDER = ['7D', '30D', '90D']
@@ -57,7 +31,7 @@ function useCountUp(target, duration = 900) {
   return count
 }
 
-function KpiCard({ label, value, prefix = '', suffix = '', delta }) {
+function KpiCard({ label, value, prefix = '', suffix = '', delta, vsLabel }) {
   const count = useCountUp(value)
   const positive = delta >= 0
   return (
@@ -68,7 +42,7 @@ function KpiCard({ label, value, prefix = '', suffix = '', delta }) {
       </p>
       <p className={`mt-1 text-xs font-semibold flex items-center gap-1 ${positive ? 'text-emerald-400' : 'text-rose-400'}`}>
         {positive ? <HiArrowTrendingUp size={12} /> : <HiArrowTrendingDown size={12} />}
-        {Math.abs(delta)}% vs. periodo anterior
+        {Math.abs(delta)}% {vsLabel}
       </p>
     </div>
   )
@@ -99,30 +73,31 @@ function BarChart({ bars }) {
 }
 
 export default function DashboardDemo() {
+  const { t } = useLanguage()
+  const d = t.demos.dashboard
   const { elapsed, playing, toggle, restart, progress } = useAutoTimeline(TOTAL_DURATION)
   const activeIndex = Math.min(Math.floor(elapsed / HOLD_MS), PERIOD_ORDER.length - 1)
   const period = PERIOD_ORDER[activeIndex]
-  const data = datasets[period]
+  const data = d.datasets[period]
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
       <div className="lg:col-span-2 lg:order-2">
         <span className="inline-flex items-center gap-1.5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
-          <HiPresentationChartBar size={14} /> Dashboards de performance
+          <HiPresentationChartBar size={14} /> {d.eyebrow}
         </span>
         <h3 className="mt-3 text-2xl md:text-3xl font-black text-white tracking-tight">
-          Tu negocio, en una sola vista
+          {d.title}
         </h3>
         <p className="mt-4 text-slate-400 leading-relaxed">
-          Ventas, análisis de performance y estado general del negocio — todo en una sola vista.
-          Observa cómo se actualizan las métricas entre 7, 30 y 90 días.
+          {d.subtitle}
         </p>
       </div>
 
       <div className="lg:col-span-3 lg:order-1">
-        <PlayerChrome label="Demo automático · Dashboard" playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
+        <PlayerChrome label={d.demoLabel} playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
           <div className="flex items-center justify-between mb-5">
-            <p className="text-white font-bold text-sm">Performance General</p>
+            <p className="text-white font-bold text-sm">{d.panelTitle}</p>
             <div className="flex gap-1 p-1 rounded-lg bg-white/5 border border-white/5">
               {PERIOD_ORDER.map((p) => (
                 <span
@@ -138,16 +113,16 @@ export default function DashboardDemo() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            <KpiCard label="Ingresos" value={data.kpis.revenue} prefix="$" delta={data.deltas.revenue} />
-            <KpiCard label="Órdenes" value={data.kpis.orders} delta={data.deltas.orders} />
-            <KpiCard label="Ticket Prom." value={data.kpis.avgTicket} prefix="$" delta={data.deltas.avgTicket} />
-            <KpiCard label="Retención" value={data.kpis.retention} suffix="%" delta={data.deltas.retention} />
+            <KpiCard label={d.kpis.revenue} value={data.kpis.revenue} prefix="$" delta={data.deltas.revenue} vsLabel={d.vsLabel} />
+            <KpiCard label={d.kpis.orders} value={data.kpis.orders} delta={data.deltas.orders} vsLabel={d.vsLabel} />
+            <KpiCard label={d.kpis.avgTicket} value={data.kpis.avgTicket} prefix="$" delta={data.deltas.avgTicket} vsLabel={d.vsLabel} />
+            <KpiCard label={d.kpis.retention} value={data.kpis.retention} suffix="%" delta={data.deltas.retention} vsLabel={d.vsLabel} />
           </div>
 
           <BarChart bars={data.bars} />
 
           <div className="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-x-5 gap-y-2">
-            {['Inventario sincronizado', 'Bot respondiendo en <2 min', 'Reportes al día'].map((s) => (
+            {d.checklist.map((s) => (
               <span key={s} className="flex items-center gap-1.5 text-xs text-slate-400">
                 <HiCheckCircle className="text-emerald-400" size={14} /> {s}
               </span>

@@ -1,16 +1,17 @@
-import { motion } from 'framer-motion'
 import { HiArrowUpRight } from 'react-icons/hi2'
 import PalmLogo from './PalmLogo'
-
-const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'Demos', href: '#demos' },
-  { label: 'About', href: '#about' },
-  { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
-]
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
+  const links = [
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.demos, href: '#demos' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.process, href: '#process' },
+    { label: t.nav.contact, href: '#contact' },
+  ]
+
   const handleNav = (href) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -27,7 +28,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-2 text-slate-500 text-sm max-w-xs">
-              Making AI and data practical and accessible for businesses in Puerto Rico.
+              {t.footer.tagline}
             </p>
           </div>
 
@@ -48,7 +49,7 @@ export default function Footer() {
               onClick={() => handleNav('#contact')}
               className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[#00d2ff]/10 border border-[#00d2ff]/20 text-[#00d2ff] hover:bg-[#00d2ff]/15 transition-colors cursor-pointer"
             >
-              Get Started
+              {t.nav.getStarted}
               <HiArrowUpRight size={14} />
             </button>
           </div>
@@ -56,10 +57,10 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-600">
-            © {new Date().getFullYear()} Paradis Technology. All rights reserved.
+            © {new Date().getFullYear()} Paradis Technology. {t.footer.rights}
           </p>
           <p className="text-xs text-slate-600">
-            Puerto Rico, USA
+            {t.footer.location}
           </p>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiArrowRight, HiChevronDown } from 'react-icons/hi'
+import { useLanguage } from '../i18n/LanguageContext'
 
 function useCountUp(target, duration = 2000, start = false) {
   const [count, setCount] = useState(0)
@@ -19,13 +20,6 @@ function useCountUp(target, duration = 2000, start = false) {
   return count
 }
 
-const stats = [
-  { value: 50, suffix: '+', label: 'Businesses Served' },
-  { value: 98, suffix: '%', label: 'Client Satisfaction' },
-  { value: 120, suffix: '+', label: 'Projects Completed' },
-  { value: 5, suffix: 'M+', label: 'Data Points Processed Daily' },
-]
-
 function StatCard({ value, suffix, label, animate }) {
   const count = useCountUp(value, 2200, animate)
   return (
@@ -39,6 +33,7 @@ function StatCard({ value, suffix, label, animate }) {
 }
 
 export default function Hero() {
+  const { t } = useLanguage()
   const [animateStats, setAnimateStats] = useState(false)
   const statsRef = useRef(null)
 
@@ -87,7 +82,7 @@ export default function Hero() {
           <motion.div variants={item}>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/20 bg-[#00d2ff]/5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00d2ff] animate-pulse" />
-              Data & AI Consulting · Puerto Rico
+              {t.hero.badge}
             </span>
           </motion.div>
 
@@ -95,9 +90,9 @@ export default function Hero() {
             variants={item}
             className="text-5xl md:text-7xl font-black text-white tracking-tight leading-tight"
           >
-            Turning Data Into{' '}
+            {t.hero.titleStart}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d2ff] to-[#6e8efb]">
-              Decisions
+              {t.hero.titleHighlight}
             </span>
           </motion.h1>
 
@@ -105,7 +100,7 @@ export default function Hero() {
             variants={item}
             className="max-w-xl text-lg md:text-xl text-slate-400 leading-relaxed"
           >
-            We help small and medium businesses in Puerto Rico unlock the power of AI and data—without the complexity. Practical solutions, real results.
+            {t.hero.subtitle}
           </motion.p>
 
           <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
@@ -113,14 +108,14 @@ export default function Hero() {
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="group flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-[#07091a] bg-[#00d2ff] hover:bg-[#00aacc] transition-all duration-200 shadow-lg shadow-[#00d2ff]/20 cursor-pointer"
             >
-              Start Your Journey
+              {t.hero.ctaPrimary}
               <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
               className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-200 cursor-pointer"
             >
-              View Services
+              {t.hero.ctaSecondary}
             </button>
           </motion.div>
 
@@ -130,7 +125,7 @@ export default function Hero() {
             className="mt-12 w-full max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-8 px-8 rounded-2xl border border-white/5 bg-white/2"
             style={{ background: 'rgba(255,255,255,0.02)' }}
           >
-            {stats.map((s) => (
+            {t.hero.stats.map((s) => (
               <StatCard key={s.label} {...s} animate={animateStats} />
             ))}
           </motion.div>

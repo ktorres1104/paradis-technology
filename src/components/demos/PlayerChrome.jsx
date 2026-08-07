@@ -1,6 +1,9 @@
 import { HiPlay, HiPause, HiArrowPath } from 'react-icons/hi2'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export default function PlayerChrome({ label, children, playing, progress, onToggle, onRestart }) {
+  const { t } = useLanguage()
+  const p = t.demos.player
   return (
     <div className="rounded-2xl border border-white/8 overflow-hidden" style={{ background: 'rgba(255,255,255,0.025)' }}>
       <div className="flex items-center justify-between px-4 py-3 border-b border-white/5">
@@ -21,7 +24,7 @@ export default function PlayerChrome({ label, children, playing, progress, onTog
       <div className="px-4 py-3 border-t border-white/5 flex items-center gap-3">
         <button
           onClick={onToggle}
-          aria-label={playing ? 'Pausar' : 'Reproducir'}
+          aria-label={playing ? p.pause : p.play}
           className="w-7 h-7 flex-shrink-0 rounded-full bg-white/8 hover:bg-white/15 flex items-center justify-center text-white transition-colors cursor-pointer"
         >
           {playing ? <HiPause size={12} /> : <HiPlay size={12} className="ml-0.5" />}
@@ -31,7 +34,7 @@ export default function PlayerChrome({ label, children, playing, progress, onTog
         </div>
         <button
           onClick={onRestart}
-          aria-label="Reiniciar"
+          aria-label={p.restart}
           className="w-7 h-7 flex-shrink-0 rounded-full bg-white/8 hover:bg-white/15 flex items-center justify-center text-white transition-colors cursor-pointer"
         >
           <HiArrowPath size={12} />

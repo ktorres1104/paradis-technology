@@ -1,39 +1,13 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { HiMagnifyingGlass, HiMap, HiWrenchScrewdriver, HiRocketLaunch } from 'react-icons/hi2'
+import { useLanguage } from '../i18n/LanguageContext'
 
-const steps = [
-  {
-    step: '01',
-    icon: HiMagnifyingGlass,
-    title: 'Discovery',
-    description:
-      "We start with a deep-dive into your business—understanding your goals, data sources, pain points, and what success actually looks like for you.",
-  },
-  {
-    step: '02',
-    icon: HiMap,
-    title: 'Strategy & Roadmap',
-    description:
-      "We craft a clear, prioritized roadmap tailored to your budget and timeline—no bloated scope, just the highest-impact moves first.",
-  },
-  {
-    step: '03',
-    icon: HiWrenchScrewdriver,
-    title: 'Build & Integrate',
-    description:
-      "Our team designs and builds your solution—dashboards, models, or automations—and integrates seamlessly into your existing tools and workflows.",
-  },
-  {
-    step: '04',
-    icon: HiRocketLaunch,
-    title: 'Launch & Optimize',
-    description:
-      "We launch, train your team, and stay by your side—measuring results and iterating so your investment keeps paying off long-term.",
-  },
-]
+const icons = [HiMagnifyingGlass, HiMap, HiWrenchScrewdriver, HiRocketLaunch]
 
 export default function Process() {
+  const { t } = useLanguage()
+  const steps = t.process.steps.map((s, i) => ({ ...s, step: String(i + 1).padStart(2, '0'), icon: icons[i] }))
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
@@ -51,12 +25,12 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">How It Works</span>
+          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">{t.process.eyebrow}</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight">
-            Our Process
+            {t.process.title}
           </h2>
           <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
-            A proven four-step framework that takes you from uncertainty to results.
+            {t.process.subtitle}
           </p>
         </motion.div>
 
@@ -103,7 +77,7 @@ export default function Process() {
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-[#07091a] bg-[#00d2ff] hover:bg-[#00aacc] transition-colors duration-200 shadow-lg shadow-[#00d2ff]/20 cursor-pointer"
           >
-            Start with a Free Discovery Call
+            {t.process.cta}
           </button>
         </motion.div>
       </div>

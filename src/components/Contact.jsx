@@ -1,20 +1,13 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiCheckCircle, HiEnvelope, HiPhone } from 'react-icons/hi2'
-
-const services = [
-  'Analytics Products',
-  'Data Science Insights & Predictions',
-  'AI Integration & Custom Products',
-  'Operations Automation',
-  'Data Consulting',
-  "I'm not sure yet",
-]
+import { useLanguage } from '../i18n/LanguageContext'
 
 const inputClass =
   'w-full px-4 py-3 rounded-xl bg-white/5 border border-white/8 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00d2ff]/50 focus:bg-[#00d2ff]/3 transition-all duration-200'
 
 export default function Contact() {
+  const { t } = useLanguage()
   const [form, setForm] = useState({ name: '', email: '', company: '', service: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -44,12 +37,12 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">Get In Touch</span>
+            <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">{t.contact.eyebrow}</span>
             <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-              Ready to Get Started?
+              {t.contact.title}
             </h2>
             <p className="mt-5 text-slate-400 text-lg leading-relaxed">
-              Tell us about your business and what you're hoping to achieve. We'll reach out within one business day to schedule a free discovery call.
+              {t.contact.subtitle}
             </p>
 
             <div className="mt-10 space-y-5">
@@ -58,7 +51,7 @@ export default function Contact() {
                   <HiEnvelope className="text-[#00d2ff]" size={18} />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Email</p>
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{t.contact.emailLabel}</p>
                   <p className="text-slate-300 text-sm font-medium mt-0.5">hello@paradisanalytics.com</p>
                 </div>
               </div>
@@ -67,7 +60,7 @@ export default function Contact() {
                   <HiPhone className="text-[#00d2ff]" size={18} />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Phone</p>
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{t.contact.phoneLabel}</p>
                   <p className="text-slate-300 text-sm font-medium mt-0.5">+1 (787) 000-0000</p>
                 </div>
               </div>
@@ -75,7 +68,7 @@ export default function Contact() {
 
             <div className="mt-10 p-5 rounded-2xl border border-[#00d2ff]/10 bg-[#00d2ff]/3">
               <p className="text-sm text-slate-300 leading-relaxed">
-                <span className="text-[#00d2ff] font-semibold">No commitment required.</span> Our discovery call is completely free—we'll assess your needs and tell you honestly what we can do for your business.
+                <span className="text-[#00d2ff] font-semibold">{t.contact.noCommitmentBold}</span> {t.contact.noCommitmentRest}
               </p>
             </div>
           </motion.div>
@@ -100,16 +93,16 @@ export default function Contact() {
                       <HiCheckCircle className="text-[#00d2ff]" size={36} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Message Received!</h3>
+                      <h3 className="text-xl font-bold text-white">{t.contact.successTitle}</h3>
                       <p className="mt-2 text-slate-400 text-sm leading-relaxed max-w-xs mx-auto">
-                        Thanks, {form.name.split(' ')[0]}! We'll reach out within one business day to schedule your free discovery call.
+                        {t.contact.successBody.replace('{name}', form.name.split(' ')[0])}
                       </p>
                     </div>
                     <button
                       onClick={() => { setSubmitted(false); setForm({ name: '', email: '', company: '', service: '', message: '' }) }}
                       className="text-sm text-[#00d2ff] hover:underline cursor-pointer"
                     >
-                      Send another message
+                      {t.contact.sendAnother}
                     </button>
                   </motion.div>
                 ) : (
@@ -119,49 +112,49 @@ export default function Contact() {
                     onSubmit={handleSubmit}
                     className="space-y-4"
                   >
-                    <h3 className="text-white font-bold text-lg mb-6">Tell us about your business</h3>
+                    <h3 className="text-white font-bold text-lg mb-6">{t.contact.formTitle}</h3>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-medium text-slate-400 mb-1.5">Full Name *</label>
+                        <label className="block text-xs font-medium text-slate-400 mb-1.5">{t.contact.nameLabel}</label>
                         <input
                           type="text"
                           name="name"
                           required
                           value={form.name}
                           onChange={handleChange}
-                          placeholder="Jane Smith"
+                          placeholder={t.contact.namePlaceholder}
                           className={inputClass}
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-medium text-slate-400 mb-1.5">Email Address *</label>
+                        <label className="block text-xs font-medium text-slate-400 mb-1.5">{t.contact.emailFieldLabel}</label>
                         <input
                           type="email"
                           name="email"
                           required
                           value={form.email}
                           onChange={handleChange}
-                          placeholder="jane@company.com"
+                          placeholder={t.contact.emailPlaceholder}
                           className={inputClass}
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-400 mb-1.5">Company Name</label>
+                      <label className="block text-xs font-medium text-slate-400 mb-1.5">{t.contact.companyLabel}</label>
                       <input
                         type="text"
                         name="company"
                         value={form.company}
                         onChange={handleChange}
-                        placeholder="Your Business Name"
+                        placeholder={t.contact.companyPlaceholder}
                         className={inputClass}
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-400 mb-1.5">Service of Interest *</label>
+                      <label className="block text-xs font-medium text-slate-400 mb-1.5">{t.contact.serviceLabel}</label>
                       <select
                         name="service"
                         required
@@ -170,22 +163,22 @@ export default function Contact() {
                         className={`${inputClass} appearance-none`}
                         style={{ colorScheme: 'dark' }}
                       >
-                        <option value="" disabled className="bg-[#07091a]">Select a service...</option>
-                        {services.map((s) => (
+                        <option value="" disabled className="bg-[#07091a]">{t.contact.serviceDefault}</option>
+                        {t.contact.services.map((s) => (
                           <option key={s} value={s} className="bg-[#07091a]">{s}</option>
                         ))}
                       </select>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-400 mb-1.5">Tell us about your goals *</label>
+                      <label className="block text-xs font-medium text-slate-400 mb-1.5">{t.contact.messageLabel}</label>
                       <textarea
                         name="message"
                         required
                         rows={4}
                         value={form.message}
                         onChange={handleChange}
-                        placeholder="What challenges are you facing? What would success look like?"
+                        placeholder={t.contact.messagePlaceholder}
                         className={`${inputClass} resize-none`}
                       />
                     </div>
@@ -198,15 +191,15 @@ export default function Contact() {
                       {loading ? (
                         <>
                           <span className="w-4 h-4 border-2 border-[#07091a]/30 border-t-[#07091a] rounded-full animate-spin" />
-                          Sending...
+                          {t.contact.sending}
                         </>
                       ) : (
-                        'Send Message'
+                        t.contact.send
                       )}
                     </button>
 
                     <p className="text-xs text-slate-500 text-center">
-                      We respond within 1 business day. No spam, ever.
+                      {t.contact.disclaimer}
                     </p>
                   </motion.form>
                 )}

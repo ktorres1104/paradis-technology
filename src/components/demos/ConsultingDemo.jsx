@@ -1,38 +1,13 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiAcademicCap, HiArrowRight, HiCheckCircle } from 'react-icons/hi2'
-
-const questions = [
-  {
-    q: '¿Cómo manejas tus datos hoy?',
-    options: ['Todo en Excel o papel', 'Tengo varias herramientas que no se hablan entre sí', 'Ya tengo dashboards, pero quiero más'],
-  },
-  {
-    q: '¿Cuál es tu mayor dolor de cabeza operacional?',
-    options: ['Tareas repetitivas que consumen tiempo', 'No sé bien qué está pasando con mis números', 'Quiero usar IA, pero no sé por dónde empezar'],
-  },
-  {
-    q: '¿Cuántas personas hay en tu equipo?',
-    options: ['Solo yo, o 1–3 personas', '4–15 personas', '16 o más'],
-  },
-]
-
-const recommendations = [
-  {
-    title: 'Plan de Automatización',
-    text: 'Con lo que nos cuentas, el mayor impacto rápido está en automatizar las tareas repetitivas — mensajes, actualizaciones, seguimiento de pedidos — para que tu equipo recupere horas cada semana.',
-  },
-  {
-    title: 'Plan de Dashboard de Performance',
-    text: 'Antes de automatizar o predecir nada, necesitas ver claro. Un dashboard centralizado te da visibilidad real de ventas, clientes y operación en un solo lugar.',
-  },
-  {
-    title: 'Sesión de Consultoría Estratégica',
-    text: 'Tiene sentido empezar con una sesión de consultoría para mapear dónde la IA rinde más en tu negocio, y definir un plan de automatización o de datos a la medida.',
-  },
-]
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export default function ConsultingDemo() {
+  const { t } = useLanguage()
+  const c = t.demos.consulting
+  const questions = c.questions
+  const recommendations = c.recommendations
   const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState([])
 
@@ -51,14 +26,13 @@ export default function ConsultingDemo() {
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
       <div className="lg:col-span-2 lg:order-2">
         <span className="inline-flex items-center gap-1.5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
-          <HiAcademicCap size={14} /> Consultoría
+          <HiAcademicCap size={14} /> {c.eyebrow}
         </span>
         <h3 className="mt-3 text-2xl md:text-3xl font-black text-white tracking-tight">
-          No sabes por dónde empezar. Está bien.
+          {c.title}
         </h3>
         <p className="mt-4 text-slate-400 leading-relaxed">
-          Contesta 3 preguntas rápidas y te decimos por dónde recomendamos que empieces. Así
-          arranca una sesión real de consultoría: entendiendo tu contexto antes de proponer nada.
+          {c.subtitle}
         </p>
       </div>
 
@@ -105,7 +79,7 @@ export default function ConsultingDemo() {
                 <div className="w-14 h-14 mx-auto rounded-full bg-[#00d2ff]/10 border border-[#00d2ff]/30 flex items-center justify-center mb-4">
                   <HiCheckCircle className="text-[#00d2ff]" size={26} />
                 </div>
-                <p className="text-xs text-[#00d2ff] font-semibold uppercase tracking-widest">Te recomendamos</p>
+                <p className="text-xs text-[#00d2ff] font-semibold uppercase tracking-widest">{c.recommendedLabel}</p>
                 <p className="mt-1.5 text-xl font-black text-white">{rec.title}</p>
                 <p className="mt-3 text-slate-400 text-sm leading-relaxed max-w-md mx-auto">{rec.text}</p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
@@ -113,13 +87,13 @@ export default function ConsultingDemo() {
                     onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                     className="px-6 py-3 rounded-xl font-semibold text-[#07091a] bg-[#00d2ff] hover:bg-[#00aacc] transition-colors cursor-pointer text-sm"
                   >
-                    Agenda tu llamada gratuita
+                    {c.bookCall}
                   </button>
                   <button
                     onClick={restart}
                     className="px-6 py-3 rounded-xl font-semibold text-slate-400 border border-white/8 hover:text-white hover:border-white/20 transition-colors cursor-pointer text-sm"
                   >
-                    Volver a intentar
+                    {c.tryAgain}
                   </button>
                 </div>
               </motion.div>

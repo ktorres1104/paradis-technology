@@ -5,17 +5,20 @@ import ChatbotDemo from './demos/ChatbotDemo'
 import DashboardDemo from './demos/DashboardDemo'
 import AutomationDemo from './demos/AutomationDemo'
 import ConsultingDemo from './demos/ConsultingDemo'
+import { useLanguage } from '../i18n/LanguageContext'
 
-const tabs = [
-  { id: 'bots', label: 'Bots', icon: HiChatBubbleLeftRight, Component: ChatbotDemo },
-  { id: 'dashboard', label: 'Dashboard', icon: HiPresentationChartBar, Component: DashboardDemo },
-  { id: 'automation', label: 'Automatización', icon: HiArrowPathRoundedSquare, Component: AutomationDemo },
-  { id: 'consulting', label: 'Consultoría', icon: HiAcademicCap, Component: ConsultingDemo },
+const tabMeta = [
+  { id: 'bots', icon: HiChatBubbleLeftRight, Component: ChatbotDemo },
+  { id: 'dashboard', icon: HiPresentationChartBar, Component: DashboardDemo },
+  { id: 'automation', icon: HiArrowPathRoundedSquare, Component: AutomationDemo },
+  { id: 'consulting', icon: HiAcademicCap, Component: ConsultingDemo },
 ]
 
 export default function Demos() {
+  const { t } = useLanguage()
+  const tabs = tabMeta.map((m) => ({ ...m, label: t.demos.tabs[m.id] }))
   const [active, setActive] = useState('bots')
-  const ActiveComponent = tabs.find((t) => t.id === active).Component
+  const ActiveComponent = tabs.find((tab) => tab.id === active).Component
 
   return (
     <section id="demos" className="py-24 px-6 relative overflow-hidden">
@@ -31,31 +34,30 @@ export default function Demos() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">Pruébalo tú mismo</span>
+          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">{t.demos.eyebrow}</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight">
-            Nuestras Herramientas en Acción
+            {t.demos.title}
           </h2>
           <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
-            Los primeros tres se reproducen solos, como una grabación. El último es interactivo —
-            contesta y recibe tu recomendación.
+            {t.demos.subtitle}
           </p>
         </motion.div>
 
         <div className="flex justify-center mb-10">
           <div className="inline-flex flex-wrap justify-center gap-1.5 p-1.5 rounded-2xl border border-white/8" style={{ background: 'rgba(255,255,255,0.02)' }}>
-            {tabs.map((t) => {
-              const Icon = t.icon
-              const isActive = active === t.id
+            {tabs.map((tab) => {
+              const Icon = tab.icon
+              const isActive = active === tab.id
               return (
                 <button
-                  key={t.id}
-                  onClick={() => setActive(t.id)}
+                  key={tab.id}
+                  onClick={() => setActive(tab.id)}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer ${
                     isActive ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   <Icon size={16} />
-                  {t.label}
+                  {tab.label}
                 </button>
               )
             })}
