@@ -35,31 +35,31 @@ export default function ChatbotDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
       <div className="lg:col-span-2">
-        <span className="inline-flex items-center gap-1.5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
+        <span className="inline-flex items-center gap-1.5 text-[#161f5c] text-xs font-semibold tracking-widest uppercase">
           <HiSparkles size={14} /> {c.eyebrow}
         </span>
-        <h3 className="mt-3 text-2xl md:text-3xl font-black text-white tracking-tight">
+        <h3 className="font-display mt-3 text-2xl md:text-3xl font-bold text-[#14181a] tracking-tight">
           {c.title}
         </h3>
-        <p className="mt-4 text-slate-400 leading-relaxed">
+        <p className="mt-4 text-[#565f63] leading-relaxed">
           {c.subtitle}
         </p>
-        <ul className="mt-6 space-y-2.5 text-sm text-slate-400">
+        <ul className="mt-6 space-y-2.5 text-sm text-[#565f63]">
           {c.bullets.map((b) => (
-            <li key={b} className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-[#00d2ff]" /> {b}</li>
+            <li key={b} className="flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-[#161f5c]" /> {b}</li>
           ))}
         </ul>
       </div>
 
       <div className="lg:col-span-3">
         <PlayerChrome label={c.demoLabel.replace('{name}', c.businessName)} playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
-          <div className="flex items-center gap-3 pb-4 mb-1 border-b border-white/5">
-            <div className="w-9 h-9 rounded-full bg-[#00d2ff]/15 border border-[#00d2ff]/30 flex items-center justify-center">
-              <HiSparkles className="text-[#00d2ff]" size={16} />
+          <div className="flex items-center gap-3 pb-4 mb-1 border-b border-[#dadfdc]">
+            <div className="w-9 h-9 rounded-full bg-[#161f5c]/15 border border-[#161f5c]/30 flex items-center justify-center">
+              <HiSparkles className="text-[#161f5c]" size={16} />
             </div>
             <div>
-              <p className="text-white text-sm font-semibold">{c.businessName}</p>
-              <p className="text-xs text-slate-500 flex items-center gap-1.5">
+              <p className="text-[#14181a] text-sm font-semibold">{c.businessName}</p>
+              <p className="text-xs text-[#75797d] flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> {c.assistantLabel}
               </p>
             </div>
@@ -76,10 +76,10 @@ export default function ChatbotDemo() {
                   className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[85%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
+                    className={`max-w-[85%] px-4 py-2.5 rounded-lg text-sm leading-relaxed ${
                       m.role === 'user'
-                        ? 'bg-[#00d2ff] text-[#07091a] rounded-br-sm font-medium'
-                        : 'bg-white/5 text-slate-200 rounded-bl-sm border border-white/5'
+                        ? 'bg-[#161f5c] text-[#f4f5f3] rounded-br-sm font-medium'
+                        : 'bg-[#f4f5f3] text-[#3a3f45] rounded-bl-sm border border-[#dadfdc]'
                     }`}
                   >
                     {m.text}
@@ -88,9 +88,9 @@ export default function ChatbotDemo() {
               ))}
               {typingActive && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex justify-start">
-                  <div className="px-4 py-3 rounded-2xl rounded-bl-sm bg-white/5 border border-white/5 flex gap-1">
+                  <div className="px-4 py-3 rounded-lg rounded-bl-sm bg-[#f4f5f3] border border-[#dadfdc] flex gap-1">
                     {[0, 1, 2].map((d) => (
-                      <span key={d} className="w-1.5 h-1.5 rounded-full bg-slate-500 animate-bounce" style={{ animationDelay: `${d * 0.15}s` }} />
+                      <span key={d} className="w-1.5 h-1.5 rounded-full bg-[#75797d] animate-bounce" style={{ animationDelay: `${d * 0.15}s` }} />
                     ))}
                   </div>
                 </motion.div>

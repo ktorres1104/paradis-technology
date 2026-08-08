@@ -16,21 +16,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 overflow-hidden">
-      {/* Grid background */}
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, #1a2040 1px, transparent 1px),
-            linear-gradient(to bottom, #1a2040 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-        }}
-      />
-      {/* Radial glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#00d2ff]/5 blur-3xl pointer-events-none" />
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-indigo-600/5 blur-3xl pointer-events-none" />
-
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
           variants={container}
@@ -39,25 +24,25 @@ export default function Hero() {
           className="flex flex-col items-center gap-6"
         >
           <motion.div variants={item}>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/20 bg-[#00d2ff]/5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00d2ff] animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#161f5c]/20 bg-[#161f5c]/5 text-[#161f5c] text-xs font-semibold tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#161f5c] animate-pulse" />
               {t.hero.badge}
             </span>
           </motion.div>
 
           <motion.h1
             variants={item}
-            className="text-5xl md:text-7xl font-black text-white tracking-tight leading-tight"
+            className="font-display text-5xl md:text-7xl font-bold text-[#14181a] tracking-tight leading-tight"
           >
             {t.hero.titleStart}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00d2ff] to-[#6e8efb]">
+            <span className="text-[#161f5c]">
               {t.hero.titleHighlight}
             </span>
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="max-w-xl text-lg md:text-xl text-slate-400 leading-relaxed"
+            className="max-w-xl text-lg md:text-xl text-[#565f63] leading-relaxed"
           >
             {t.hero.subtitle}
           </motion.p>
@@ -65,14 +50,14 @@ export default function Hero() {
           <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-[#07091a] bg-[#00d2ff] hover:bg-[#00aacc] transition-all duration-200 shadow-lg shadow-[#00d2ff]/20 cursor-pointer"
+              className="group flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-[#f4f5f3] bg-[#161f5c] hover:bg-[#24339e] transition-all duration-200 shadow-lg shadow-[#161f5c]/20 cursor-pointer"
             >
               {t.hero.ctaPrimary}
               <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-200 cursor-pointer"
+              className="flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-[#14181a] border border-[#dadfdc] hover:border-[#b9c1bd] hover:bg-white transition-all duration-200 cursor-pointer"
             >
               {t.hero.ctaSecondary}
             </button>
@@ -82,7 +67,7 @@ export default function Hero() {
 
       <button
         onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-500 hover:text-slate-300 transition-colors animate-bounce cursor-pointer"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#75797d] hover:text-[#3a3f45] transition-colors animate-bounce cursor-pointer"
       >
         <HiChevronDown size={28} />
       </button>

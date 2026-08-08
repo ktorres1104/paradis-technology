@@ -35,12 +35,12 @@ function KpiCard({ label, value, prefix = '', suffix = '', delta, vsLabel }) {
   const count = useCountUp(value)
   const positive = delta >= 0
   return (
-    <div className="p-4 rounded-xl border border-white/5" style={{ background: 'rgba(255,255,255,0.03)' }}>
-      <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{label}</p>
-      <p className="mt-1.5 text-2xl font-black text-white">
+    <div className="p-4 rounded-lg border border-[#dadfdc] bg-[#f4f5f3]">
+      <p className="text-xs text-[#75797d] font-medium uppercase tracking-wider">{label}</p>
+      <p className="mt-1.5 text-2xl font-black text-[#14181a]">
         {prefix}{count.toLocaleString()}{suffix}
       </p>
-      <p className={`mt-1 text-xs font-semibold flex items-center gap-1 ${positive ? 'text-emerald-400' : 'text-rose-400'}`}>
+      <p className={`mt-1 text-xs font-semibold flex items-center gap-1 ${positive ? 'text-emerald-600' : 'text-rose-600'}`}>
         {positive ? <HiArrowTrendingUp size={12} /> : <HiArrowTrendingDown size={12} />}
         {Math.abs(delta)}% {vsLabel}
       </p>
@@ -59,13 +59,13 @@ function BarChart({ bars }) {
               initial={{ height: 0 }}
               animate={{ height: `${(b.value / max) * 100}%` }}
               transition={{ duration: 0.6, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-              className="w-full max-w-[28px] rounded-t-md bg-gradient-to-t from-[#00d2ff]/40 to-[#00d2ff]"
+              className="w-full max-w-[28px] rounded-t-md bg-gradient-to-t from-[#161f5c]/40 to-[#161f5c]"
             />
-            <span className="absolute -top-6 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-semibold text-white bg-[#07091a] border border-white/10 px-1.5 py-0.5 rounded">
+            <span className="absolute -top-6 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-semibold text-[#14181a] bg-[#f4f5f3] border border-[#dadfdc] px-1.5 py-0.5 rounded">
               ${b.value.toLocaleString()}
             </span>
           </div>
-          <span className="text-[10px] text-slate-500 font-medium">{b.label}</span>
+          <span className="text-[10px] text-[#75797d] font-medium">{b.label}</span>
         </div>
       ))}
     </div>
@@ -83,13 +83,13 @@ export default function DashboardDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
       <div className="lg:col-span-2 lg:order-2">
-        <span className="inline-flex items-center gap-1.5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
+        <span className="inline-flex items-center gap-1.5 text-[#161f5c] text-xs font-semibold tracking-widest uppercase">
           <HiPresentationChartBar size={14} /> {d.eyebrow}
         </span>
-        <h3 className="mt-3 text-2xl md:text-3xl font-black text-white tracking-tight">
+        <h3 className="font-display mt-3 text-2xl md:text-3xl font-bold text-[#14181a] tracking-tight">
           {d.title}
         </h3>
-        <p className="mt-4 text-slate-400 leading-relaxed">
+        <p className="mt-4 text-[#565f63] leading-relaxed">
           {d.subtitle}
         </p>
       </div>
@@ -97,13 +97,13 @@ export default function DashboardDemo() {
       <div className="lg:col-span-3 lg:order-1">
         <PlayerChrome label={d.demoLabel} playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
           <div className="flex items-center justify-between mb-5">
-            <p className="text-white font-bold text-sm">{d.panelTitle}</p>
-            <div className="flex gap-1 p-1 rounded-lg bg-white/5 border border-white/5">
+            <p className="text-[#14181a] font-bold text-sm">{d.panelTitle}</p>
+            <div className="flex gap-1 p-1 rounded-lg bg-white border border-[#dadfdc]">
               {PERIOD_ORDER.map((p) => (
                 <span
                   key={p}
                   className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
-                    period === p ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-500'
+                    period === p ? 'bg-[#161f5c] text-[#f4f5f3]' : 'text-[#75797d]'
                   }`}
                 >
                   {p}
@@ -121,10 +121,10 @@ export default function DashboardDemo() {
 
           <BarChart bars={data.bars} />
 
-          <div className="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-x-5 gap-y-2">
+          <div className="mt-6 pt-4 border-t border-[#dadfdc] flex flex-wrap gap-x-5 gap-y-2">
             {d.checklist.map((s) => (
-              <span key={s} className="flex items-center gap-1.5 text-xs text-slate-400">
-                <HiCheckCircle className="text-emerald-400" size={14} /> {s}
+              <span key={s} className="flex items-center gap-1.5 text-xs text-[#565f63]">
+                <HiCheckCircle className="text-emerald-600" size={14} /> {s}
               </span>
             ))}
           </div>

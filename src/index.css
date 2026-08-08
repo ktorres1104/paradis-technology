@@ -2,11 +2,11 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
-  --color-navy: #07091a;
-  --color-navy-2: #0a0d24;
-  --color-navy-3: #0d1133;
-  --color-cyan: #00d2ff;
-  --color-cyan-dim: #00aacc;
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --color-paper: #f4f5f3;
+  --color-ink: #14181a;
+  --color-accent: #161f5c;
+  --color-accent-hover: #24339e;
 }
 
 * {
@@ -20,8 +20,8 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #07091a;
-  color: #e2e8f0;
+  background-color: #f4f5f3;
+  color: #14181a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,4 +29,8 @@ body {
 #root {
   min-height: 100vh;
   width: 100%;
+}
+
+.font-display {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
 }

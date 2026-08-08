@@ -18,17 +18,17 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative border-t border-white/5 py-12 px-6">
+    <footer className="relative border-t border-[#dadfdc] py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 justify-center md:justify-start">
               <PalmLogo size={32} />
-              <span className="font-bold text-white text-base tracking-tight">
-                Paradis <span className="text-[#00d2ff]">Technology</span>
+              <span className="font-display font-bold text-[#14181a] text-base tracking-tight">
+                Paradis <span className="text-[#161f5c]">Technology</span>
               </span>
             </div>
-            <p className="mt-2 text-slate-500 text-sm max-w-xs">
+            <p className="mt-2 text-[#75797d] text-sm max-w-xs">
               {t.footer.tagline}
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
               <button
                 key={link.href}
                 onClick={() => handleNav(link.href)}
-                className="text-sm text-slate-400 hover:text-white transition-colors cursor-pointer"
+                className="text-sm text-[#565f63] hover:text-[#14181a] transition-colors cursor-pointer"
               >
                 {link.label}
               </button>
@@ -48,7 +48,7 @@ export default function Footer() {
           <div>
             <button
               onClick={() => handleNav('#contact')}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[#00d2ff]/10 border border-[#00d2ff]/20 text-[#00d2ff] hover:bg-[#00d2ff]/15 transition-colors cursor-pointer"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-[#161f5c]/10 border border-[#161f5c]/20 text-[#161f5c] hover:bg-[#161f5c]/15 transition-colors cursor-pointer"
             >
               {t.nav.getStarted}
               <HiArrowUpRight size={14} />
@@ -56,11 +56,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-slate-600">
+        <div className="mt-10 pt-6 border-t border-[#dadfdc] flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-[#8a8e93]">
             © {new Date().getFullYear()} Paradis Technology. {t.footer.rights}
           </p>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-[#8a8e93]">
             {t.footer.location}
           </p>
         </div>

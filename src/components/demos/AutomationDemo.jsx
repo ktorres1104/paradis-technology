@@ -41,25 +41,25 @@ export default function AutomationDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
       <div className="lg:col-span-2">
-        <span className="inline-flex items-center gap-1.5 text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">
+        <span className="inline-flex items-center gap-1.5 text-[#161f5c] text-xs font-semibold tracking-widest uppercase">
           <HiArrowPathRoundedSquare size={14} /> {a.eyebrow}
         </span>
-        <h3 className="mt-3 text-2xl md:text-3xl font-black text-white tracking-tight">
+        <h3 className="font-display mt-3 text-2xl md:text-3xl font-bold text-[#14181a] tracking-tight">
           {a.title}
         </h3>
-        <p className="mt-4 text-slate-400 leading-relaxed">
+        <p className="mt-4 text-[#565f63] leading-relaxed">
           {a.subtitle}
         </p>
       </div>
 
       <div className="lg:col-span-3">
         <PlayerChrome label={a.demoLabel.replace('{name}', flow.name)} playing={playing} progress={progress} onToggle={toggle} onRestart={restart}>
-          <div className="relative rounded-xl -m-2 p-2" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px)', backgroundSize: '18px 18px' }}>
-            <div className="hidden md:block absolute top-9 left-9 right-9 h-px bg-white/10">
+          <div className="relative rounded-lg -m-2 p-2" style={{ backgroundImage: 'radial-gradient(rgba(20,24,26,0.06) 1px, transparent 1px)', backgroundSize: '18px 18px' }}>
+            <div className="hidden md:block absolute top-9 left-9 right-9 h-px bg-[#dadfdc]">
               {active >= 0 && (
                 <motion.div
-                  className="absolute top-0 w-2.5 h-2.5 rounded-full bg-[#00d2ff] -translate-y-1/2 -translate-x-1/2"
-                  style={{ boxShadow: '0 0 8px 2px rgba(0,210,255,0.6)' }}
+                  className="absolute top-0 w-2.5 h-2.5 rounded-full bg-[#161f5c] -translate-y-1/2 -translate-x-1/2"
+                  style={{ boxShadow: '0 0 8px 2px rgba(22,31,92,0.6)' }}
                   animate={{ left: `${(active / (NODES_COUNT - 1)) * 100}%` }}
                   transition={{ duration: 0.35, ease: 'easeInOut' }}
                 />
@@ -75,16 +75,16 @@ export default function AutomationDemo() {
                     <motion.div
                       animate={{
                         scale: isActive ? 1.15 : 1,
-                        borderColor: isActive || isPast ? 'rgba(0,210,255,0.6)' : 'rgba(255,255,255,0.08)',
-                        backgroundColor: isActive || isPast ? 'rgba(0,210,255,0.12)' : 'rgba(255,255,255,0.03)',
+                        borderColor: isActive || isPast ? 'rgba(22,31,92,0.6)' : 'rgba(20,24,26,0.12)',
+                        backgroundColor: isActive || isPast ? 'rgba(22,31,92,0.12)' : 'rgba(20,24,26,0.02)',
                       }}
                       transition={{ duration: 0.3 }}
-                      className="w-14 h-14 flex-shrink-0 rounded-2xl border flex items-center justify-center relative z-10"
+                      className="w-14 h-14 flex-shrink-0 rounded-lg border flex items-center justify-center relative z-10"
                     >
-                      <Icon className={isActive || isPast ? 'text-[#00d2ff]' : 'text-slate-500'} size={22} />
+                      <Icon className={isActive || isPast ? 'text-[#161f5c]' : 'text-[#75797d]'} size={22} />
                       {isActive && (
                         <motion.span
-                          className="absolute inset-0 rounded-2xl border-2 border-[#00d2ff]"
+                          className="absolute inset-0 rounded-lg border-2 border-[#161f5c]"
                           initial={{ opacity: 0.6, scale: 1 }}
                           animate={{ opacity: 0, scale: 1.4 }}
                           transition={{ duration: 0.7, repeat: Infinity }}
@@ -92,8 +92,8 @@ export default function AutomationDemo() {
                       )}
                     </motion.div>
                     <div className="md:mt-1">
-                      <p className={`text-xs md:text-sm font-bold ${isActive ? 'text-[#00d2ff]' : 'text-white'}`}>{n.title}</p>
-                      <p className="text-[11px] text-slate-500 mt-0.5 leading-snug max-w-[130px] md:mx-auto">{n.desc}</p>
+                      <p className={`text-xs md:text-sm font-bold ${isActive ? 'text-[#161f5c]' : 'text-[#14181a]'}`}>{n.title}</p>
+                      <p className="text-[11px] text-[#75797d] mt-0.5 leading-snug max-w-[130px] md:mx-auto">{n.desc}</p>
                     </div>
                   </div>
                 )
@@ -101,13 +101,13 @@ export default function AutomationDemo() {
             </div>
           </div>
 
-          <div className="mt-6 pt-5 border-t border-white/5 text-center">
+          <div className="mt-6 pt-5 border-t border-[#dadfdc] text-center">
             {done ? (
-              <p className="text-sm text-emerald-400 font-semibold flex items-center justify-center gap-1.5">
+              <p className="text-sm text-emerald-600 font-semibold flex items-center justify-center gap-1.5">
                 <HiCheckCircle size={16} /> {a.doneText}
               </p>
             ) : (
-              <p className="text-sm text-slate-500">{a.runningText}</p>
+              <p className="text-sm text-[#75797d]">{a.runningText}</p>
             )}
           </div>
         </PlayerChrome>

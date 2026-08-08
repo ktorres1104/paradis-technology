@@ -12,11 +12,7 @@ export default function Process() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="process" className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-900/10 blur-3xl rounded-full" />
-      </div>
-
+    <section id="process" className="py-24 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,18 +21,18 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">{t.process.eyebrow}</span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight">
+          <span className="text-[#161f5c] text-xs font-semibold tracking-widest uppercase">{t.process.eyebrow}</span>
+          <h2 className="font-display mt-3 text-4xl md:text-5xl font-bold text-[#14181a] tracking-tight">
             {t.process.title}
           </h2>
-          <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-[#565f63] text-lg max-w-xl mx-auto">
             {t.process.subtitle}
           </p>
         </motion.div>
 
         <div ref={ref} className="relative">
           {/* Connector line (desktop) */}
-          <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[#00d2ff]/20 to-transparent" />
+          <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[#161f5c]/20 to-transparent" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((s, i) => {
@@ -50,16 +46,16 @@ export default function Process() {
                   className="flex flex-col items-center text-center"
                 >
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-[#00d2ff]/10 border border-[#00d2ff]/25 flex items-center justify-center">
-                      <Icon className="text-[#00d2ff]" size={26} />
+                    <div className="w-16 h-16 rounded-lg bg-[#161f5c]/10 border border-[#161f5c]/25 flex items-center justify-center">
+                      <Icon className="text-[#161f5c]" size={26} />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#07091a] border border-[#00d2ff]/40 text-[10px] font-bold text-[#00d2ff] flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#f4f5f3] border border-[#161f5c]/40 text-[10px] font-bold text-[#161f5c] flex items-center justify-center">
                       {i + 1}
                     </span>
                   </div>
 
-                  <h3 className="text-white font-bold text-lg mb-3">{s.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{s.description}</p>
+                  <h3 className="font-display text-[#14181a] font-bold text-lg mb-3">{s.title}</h3>
+                  <p className="text-[#565f63] text-sm leading-relaxed">{s.description}</p>
                 </motion.div>
               )
             })}
@@ -75,7 +71,7 @@ export default function Process() {
         >
           <button
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-[#07091a] bg-[#00d2ff] hover:bg-[#00aacc] transition-colors duration-200 shadow-lg shadow-[#00d2ff]/20 cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-[#f4f5f3] bg-[#161f5c] hover:bg-[#24339e] transition-colors duration-200 shadow-lg shadow-[#161f5c]/20 cursor-pointer"
           >
             {t.process.cta}
           </button>

@@ -13,7 +13,7 @@ import './index.css'
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-[#07091a] text-white">
+      <div className="min-h-screen bg-[#f4f5f3] text-[#14181a]">
         <Navbar />
         <main>
           <Hero />

@@ -21,11 +21,7 @@ export default function Demos() {
   const ActiveComponent = tabs.find((tab) => tab.id === active).Component
 
   return (
-    <section id="demos" className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-[#00d2ff]/3 blur-3xl rounded-full" />
-      </div>
-
+    <section id="demos" className="py-24 px-6 relative bg-[#eef0ef]">
       <div className="max-w-7xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,17 +30,17 @@ export default function Demos() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-[#00d2ff] text-xs font-semibold tracking-widest uppercase">{t.demos.eyebrow}</span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight">
+          <span className="text-[#161f5c] text-xs font-semibold tracking-widest uppercase">{t.demos.eyebrow}</span>
+          <h2 className="font-display mt-3 text-4xl md:text-5xl font-bold text-[#14181a] tracking-tight">
             {t.demos.title}
           </h2>
-          <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-[#565f63] text-lg max-w-xl mx-auto">
             {t.demos.subtitle}
           </p>
         </motion.div>
 
         <div className="flex justify-center mb-10">
-          <div className="inline-flex flex-wrap justify-center gap-1.5 p-1.5 rounded-2xl border border-white/8" style={{ background: 'rgba(255,255,255,0.02)' }}>
+          <div className="inline-flex flex-wrap justify-center gap-1.5 p-1.5 rounded-lg border border-[#dadfdc] bg-white">
             {tabs.map((tab) => {
               const Icon = tab.icon
               const isActive = active === tab.id
@@ -52,8 +48,8 @@ export default function Demos() {
                 <button
                   key={tab.id}
                   onClick={() => setActive(tab.id)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer ${
-                    isActive ? 'bg-[#00d2ff] text-[#07091a]' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                    isActive ? 'bg-[#161f5c] text-[#f4f5f3]' : 'text-[#565f63] hover:text-[#14181a] hover:bg-white'
                   }`}
                 >
                   <Icon size={16} />
@@ -69,8 +65,7 @@ export default function Demos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="p-6 md:p-10 rounded-3xl border border-white/5"
-          style={{ background: 'rgba(255,255,255,0.015)' }}
+          className="p-6 md:p-10 rounded-xl border border-[#dadfdc] bg-white"
         >
           <motion.div
             key={active}
