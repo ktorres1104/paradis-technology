@@ -184,6 +184,8 @@ export const translations = {
       subtitle:
         'The first three play automatically, like a recording. The last one is interactive: answer and get your recommendation.',
       tabs: { bots: 'Bots', dashboard: 'Dashboard', automation: 'Automation', consulting: 'Consulting' },
+      prevTool: 'Previous tool',
+      nextTool: 'Next tool',
       chatbot: {
         eyebrow: 'Bots for Businesses',
         title: 'An assistant that guides, not just responds',
@@ -534,6 +536,8 @@ export const translations = {
       subtitle:
         'Los primeros tres se reproducen solos, como una grabación. El último es interactivo: contesta y recibe tu recomendación.',
       tabs: { bots: 'Bots', dashboard: 'Dashboard', automation: 'Automatización', consulting: 'Consultoría' },
+      prevTool: 'Herramienta anterior',
+      nextTool: 'Siguiente herramienta',
       chatbot: {
         eyebrow: 'Bots para negocios',
         title: 'Un asistente que orienta, no solo responde',
