@@ -362,7 +362,7 @@ export const translations = {
       getStarted: 'Comenzar',
     },
     hero: {
-      badge: 'Consultoría de Datos e IA · Puerto Rico',
+      badge: 'Consultoría de Datos & IA · Puerto Rico',
       titleStart: 'Convertimos Datos En',
       titleHighlight: 'Decisiones',
       subtitle:
