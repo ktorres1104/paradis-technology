@@ -19,7 +19,7 @@ export default function About() {
             <h2 className="font-display mt-3 text-4xl md:text-5xl font-bold text-[#14181a] tracking-tight leading-tight">
               {t.about.title}
             </h2>
-            <p className="mt-6 text-[#565f63] text-lg leading-relaxed">
+            <p className="mt-6 text-[#565f63] leading-relaxed">
               {t.about.p1}
             </p>
             <p className="mt-4 text-[#565f63] leading-relaxed">
