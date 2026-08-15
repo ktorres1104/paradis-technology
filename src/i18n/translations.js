@@ -104,7 +104,7 @@ export const translations = {
             'We launch it, train your team, and stick around, checking in on results and making adjustments so it keeps paying off.',
         },
       ],
-      cta: 'Book a Free Call',
+      cta: 'Book a Free Discovery Call',
     },
     faq: {
       eyebrow: 'Questions',
@@ -113,7 +113,7 @@ export const translations = {
       items: [
         {
           q: 'How much does this cost?',
-          a: "It depends on what we'd actually be doing together. Ongoing consulting, building you a specific tool, and grant-funded work are priced very differently. We figure out what fits and give you a real number on our free call, not before.",
+          a: "It depends on what we'd actually be doing together. Ongoing consulting, building you a specific tool, and grant-funded work are priced very differently. We figure out what fits and give you a real number on your discovery call, not before.",
         },
         {
           q: 'How long does a typical project take?',
@@ -133,7 +133,7 @@ export const translations = {
         },
         {
           q: "I'm not sure what I actually need. Can you help with that?",
-          a: "That's exactly what the free call is for. Try our interactive tools above, or just reach out. We'll ask a few questions and point you in the right direction.",
+          a: "That's exactly what the discovery call is for. Try our interactive tools above, or just reach out. We'll ask a few questions and point you in the right direction.",
         },
       ],
     },
@@ -141,12 +141,12 @@ export const translations = {
       eyebrow: 'Get In Touch',
       title: 'Ready to Get Started?',
       subtitle:
-        "Tell us about your business and what you're hoping to achieve. We'll reach out within one business day to schedule a free call.",
+        "Tell us about your business and what you're hoping to achieve. We'll reach out within one business day to schedule a discovery call.",
       emailLabel: 'Email',
       phoneLabel: 'Phone',
       noCommitmentBold: 'No commitment required.',
       noCommitmentRest:
-        "Our call is completely free: we'll take a look at your needs and tell you honestly what we can do for your business.",
+        "Our discovery call is completely free: we'll take a look at your needs and tell you honestly what we can do for your business.",
       formTitle: 'Tell us about your business',
       nameLabel: 'Full Name *',
       namePlaceholder: 'Jane Smith',
@@ -170,7 +170,7 @@ export const translations = {
       send: 'Send Message',
       disclaimer: 'We respond within 1 business day. No spam, ever.',
       successTitle: 'Message Received!',
-      successBody: "Thanks, {name}! We'll reach out within one business day to schedule your free call.",
+      successBody: "Thanks, {name}! We'll reach out within one business day to schedule your discovery call.",
       sendAnother: 'Send another message',
     },
     footer: {
@@ -456,7 +456,7 @@ export const translations = {
             'Lo lanzamos, entrenamos a tu equipo, y nos quedamos cerca, revisando resultados y haciendo ajustes para que tu inversión siga dando frutos.',
         },
       ],
-      cta: 'Agenda una Llamada Gratis',
+      cta: 'Agenda una Llamada de Descubrimiento Gratis',
     },
     faq: {
       eyebrow: 'Preguntas',
@@ -465,7 +465,7 @@ export const translations = {
       items: [
         {
           q: '¿Cuánto cuesta esto?',
-          a: 'Depende de qué vayamos a hacer juntos. Una consultoría continua, construirte una herramienta específica, o un proyecto financiado por subvención tienen precios muy distintos. Definimos qué aplica y te damos un número real en la llamada gratis, no antes.',
+          a: 'Depende de qué vayamos a hacer juntos. Una consultoría continua, construirte una herramienta específica, o un proyecto financiado por subvención tienen precios muy distintos. Definimos qué aplica y te damos un número real en tu llamada de descubrimiento, no antes.',
         },
         {
           q: '¿Cuánto tiempo toma un proyecto típico?',
@@ -485,7 +485,7 @@ export const translations = {
         },
         {
           q: 'No estoy seguro/a de qué necesito. ¿Me pueden ayudar con eso?',
-          a: 'Para eso es exactamente la llamada gratis. Prueba nuestras herramientas interactivas arriba, o simplemente escríbenos. Te haremos algunas preguntas y te orientamos.',
+          a: 'Para eso es exactamente la llamada de descubrimiento. Prueba nuestras herramientas interactivas arriba, o simplemente escríbenos. Te haremos algunas preguntas y te orientamos.',
         },
       ],
     },
@@ -493,12 +493,12 @@ export const translations = {
       eyebrow: 'Contáctanos',
       title: '¿Listo para Comenzar?',
       subtitle:
-        'Cuéntanos sobre tu negocio y lo que esperas lograr. Te contactaremos dentro de un día laborable para agendar tu llamada gratis.',
+        'Cuéntanos sobre tu negocio y lo que esperas lograr. Te contactaremos dentro de un día laborable para agendar tu llamada de descubrimiento.',
       emailLabel: 'Correo',
       phoneLabel: 'Teléfono',
       noCommitmentBold: 'Sin compromiso.',
       noCommitmentRest:
-        'Nuestra llamada es completamente gratis: revisamos tus necesidades y te decimos honestamente qué podemos hacer por tu negocio.',
+        'Nuestra llamada de descubrimiento es completamente gratis: revisamos tus necesidades y te decimos honestamente qué podemos hacer por tu negocio.',
       formTitle: 'Cuéntanos sobre tu negocio',
       nameLabel: 'Nombre Completo *',
       namePlaceholder: 'Jane Smith',
@@ -522,7 +522,7 @@ export const translations = {
       send: 'Enviar Mensaje',
       disclaimer: 'Respondemos dentro de 1 día laborable. Sin spam, nunca.',
       successTitle: '¡Mensaje Recibido!',
-      successBody: '¡Gracias, {name}! Te contactaremos dentro de un día laborable para agendar tu llamada gratis.',
+      successBody: '¡Gracias, {name}! Te contactaremos dentro de un día laborable para agendar tu llamada de descubrimiento.',
       sendAnother: 'Enviar otro mensaje',
     },
     footer: {
