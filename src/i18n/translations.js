@@ -73,7 +73,7 @@ export const translations = {
       ],
       founderHeading: 'The Team Behind Paradis',
       founderParagraphs: [
-        "Our team is trained in data science, with a Master's in Data Science and a background in Applied Mathematics and Physics. That means our work is built on precision, not guesswork.",
+        'Our team is trained in Applied Mathematics, Engineering, and Data Science, with graduate-level studies. That means our work is built on precision, not guesswork.',
         "We've put that foundation to work across health insurance, finance, education, payment processing, and digital marketing, building tools that turn data into real decisions, not just reports.",
         "Today, we bring that same care into every AI tool we build, whether it's for a small business or a larger company. It's the same standard behind everything Paradis delivers: built to work in the real world, not just look good in a demo.",
       ],
@@ -124,7 +124,7 @@ export const translations = {
           a: "No. That's the whole point: we speak your language, not the other way around. You don't need any technical background to work with us.",
         },
         {
-          q: 'Do you work in Spanish?',
+          q: 'Do you work in English?',
           a: 'Yes. We work fluently in both English and Spanish, this website included. Our team is Puerto Rico–based and understands the local market.',
         },
         {
@@ -425,7 +425,7 @@ export const translations = {
       ],
       founderHeading: 'El Equipo Detrás de Paradis',
       founderParagraphs: [
-        'Nuestro equipo tiene formación en ciencia de datos, con una maestría en Data Science y una base en Matemática Aplicada y Física. Eso significa que nuestro trabajo está construido sobre precisión, no sobre corazonadas.',
+        'Nuestro equipo está formado en Matemática Aplicada, Ingeniería y Ciencia de Datos, con estudios graduados. Eso significa que nuestro trabajo está construido sobre precisión, no sobre suposiciones.',
         'Hemos puesto esa base a prueba en seguros de salud, finanzas, educación, procesamiento de pagos y mercadeo digital, construyendo herramientas que convierten datos en decisiones reales, no solo en reportes.',
         'Hoy, llevamos ese mismo cuidado a cada herramienta de IA que construimos, ya sea para un negocio pequeño o una empresa más grande. Es el mismo estándar detrás de todo lo que entrega Paradis: construido para funcionar en el mundo real, no solo para verse bien en una demo.',
       ],
