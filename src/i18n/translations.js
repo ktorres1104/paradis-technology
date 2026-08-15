@@ -14,44 +14,44 @@ export const translations = {
       titleStart: 'Turning Data Into',
       titleHighlight: 'Decisions',
       subtitle:
-        'We help small and medium businesses in Puerto Rico unlock the power of AI and data, without the complexity. Practical solutions, real results.',
-      ctaPrimary: 'Start Your Journey',
-      ctaSecondary: 'View Services',
+        'We help small and medium businesses in Puerto Rico put AI and data to work, without the complexity. Practical solutions, real results.',
+      ctaPrimary: "Let's Talk",
+      ctaSecondary: 'See Our Services',
     },
     services: {
       eyebrow: 'What We Do',
       title: 'Our Services',
-      subtitle: 'End-to-end data and AI solutions designed for businesses ready to grow smarter.',
+      subtitle: 'Practical AI and data help, built for businesses ready to grow.',
       items: [
         {
-          title: 'Analytics Products',
+          title: 'Dashboards & Reports',
           description:
-            'Custom dashboards and reporting tools that give you a clear, real-time view of what matters most in your business.',
-          tags: ['Dashboards', 'KPI Tracking', 'Data Viz'],
+            'Simple dashboards that show you, in real time, what matters most in your business.',
+          tags: ['Dashboards', 'Simple Reports', 'Charts & Visuals'],
         },
         {
-          title: 'Data Science Insights & Predictions',
+          title: 'Smarter Predictions',
           description:
-            'Transform raw business data into actionable predictions, from demand forecasting to customer behavior analysis.',
-          tags: ['Forecasting', 'ML Models', 'Trend Analysis'],
+            'We turn your business data into simple predictions, like knowing what to expect next month or what your customers want.',
+          tags: ['Forecasting', 'Trends', 'Predictions'],
         },
         {
-          title: 'AI Integration & Custom Products',
+          title: 'Custom AI Tools',
           description:
-            'Purpose-built AI tools tailored to your workflows: chatbots, recommendation engines, document processors, and more.',
-          tags: ['Generative AI', 'LLM Apps', 'Custom Tools'],
+            'AI tools built around how you already work: chatbots that talk to your customers, tools that read documents for you, and more.',
+          tags: ['Chatbots', 'AI Assistants', 'Custom Tools'],
         },
         {
-          title: 'Operations Automation',
+          title: 'Automation',
           description:
-            'Eliminate repetitive manual tasks with intelligent automation that saves time, reduces errors, and scales with you.',
-          tags: ['Process Automation', 'Workflows', 'Integration'],
+            'We take the repetitive, manual tasks off your plate, saving you time and cutting down on mistakes.',
+          tags: ['Automation', 'Saving Time', 'Fewer Errors'],
         },
         {
-          title: 'Data Consulting',
+          title: 'Guidance & Consulting',
           description:
-            'Strategic guidance on building your data infrastructure and roadmap, so every technology decision moves you forward.',
-          tags: ['Strategy', 'Architecture', 'Roadmapping'],
+            "Not sure where to start? We help you figure out what to do first, and stick with you through every decision.",
+          tags: ['Guidance', 'Planning', 'Next Steps'],
         },
       ],
       notSure: 'Not sure what you need?',
@@ -60,51 +60,51 @@ export const translations = {
     about: {
       eyebrow: 'Our Mission',
       title: 'Your Local AI & Data Partner',
-      p1: "Paradis Technology exists to help small and medium businesses (here in Puerto Rico, and beyond) keep pace with today's AI and technology trends, without paying the price tag of a big corporate vendor.",
-      p2: 'We tailor every solution to how your business actually works, not the other way around. That flexibility is what lets a local shop get tools of the same caliber as a large company, at a fraction of the cost, and built around what you actually need.',
+      p1: "We started Paradis Technology to help small and medium businesses, here in Puerto Rico and beyond, keep up with today's AI and technology, without paying big-corporation prices.",
+      p2: "We build every solution around how your business actually works, not the other way around. That's what lets a local shop get the same quality of tools as a big company, at a fraction of the cost, made around what you actually need.",
       badge: 'Focused on Puerto Rico, serving businesses across the U.S.',
       differentTitle: 'What Makes Us Different',
       differentiators: [
         'No data science degree required: we speak your language',
-        'Enterprise-grade AI and automation, priced for small and medium businesses',
-        'Every solution tailored to how your business actually works, not a rigid, one-size-fits-all package',
+        'The same quality of AI and automation big companies use, priced for small and medium businesses',
+        'Every solution tailored to how your business actually works, not a one-size-fits-all package',
         'Puerto Rico–based team that understands the local market',
         'Ongoing partnership, not a one-time project',
       ],
-      founderHeading: 'Who’s Behind Paradis',
+      founderHeading: 'The Team Behind Paradis',
       founderParagraphs: [
-        'Behind Paradis is a data scientist with a Master’s in Data Science and a background in Applied Mathematics and Physics: training built for precision, not guesswork.',
-        'That foundation has been tested across health insurance, finance, education, payment operations, and digital marketing, building machine learning models, statistical models, and AI-powered products that turn data into real business decisions, not just reports.',
-        "Today, that same rigor carries into building machine learning products that increase efficiency at a corporate level across different business functions. It's the same standard behind every solution Paradis delivers: built to hold up under real conditions, not just look good in a demo.",
+        "Our team is trained in data science, with a Master's in Data Science and a background in Applied Mathematics and Physics. That means our work is built on precision, not guesswork.",
+        "We've put that foundation to work across health insurance, finance, education, payment processing, and digital marketing, building tools that turn data into real decisions, not just reports.",
+        "Today, we bring that same care into every AI tool we build, whether it's for a small business or a larger company. It's the same standard behind everything Paradis delivers: built to work in the real world, not just look good in a demo.",
       ],
     },
     process: {
       eyebrow: 'How It Works',
       title: 'Our Process',
-      subtitle: 'A proven four-step framework that takes you from uncertainty to results.',
+      subtitle: 'Four simple steps that take you from not knowing where to start, to real results.',
       steps: [
         {
           title: 'Discovery',
           description:
-            'We start with a deep-dive into your business, understanding your goals, data sources, pain points, and what success actually looks like for you.',
+            "We start by getting to know your business: your goals, what data you have, what's frustrating you, and what success would actually look like.",
         },
         {
-          title: 'Strategy & Roadmap',
+          title: 'The Plan',
           description:
-            'We craft a clear, prioritized roadmap tailored to your budget and timeline, no bloated scope, just the highest-impact moves first.',
+            'We put together a clear plan that fits your budget and timeline, starting with what will make the biggest difference first.',
         },
         {
           title: 'Build & Integrate',
           description:
-            'Our team designs and builds your solution (dashboards, models, or automations) and integrates seamlessly into your existing tools and workflows.',
+            "Our team builds your solution, whether that's a dashboard, a tool, or an automation, and connects it smoothly with what you already use.",
         },
         {
           title: 'Launch & Optimize',
           description:
-            'We launch, train your team, and stay by your side, measuring results and iterating so your investment keeps paying off long-term.',
+            'We launch it, train your team, and stick around, checking in on results and making adjustments so it keeps paying off.',
         },
       ],
-      cta: 'Start with a Free Discovery Call',
+      cta: 'Book a Free Call',
     },
     faq: {
       eyebrow: 'Questions',
@@ -113,11 +113,11 @@ export const translations = {
       items: [
         {
           q: 'How much does this cost?',
-          a: "It depends on what we'd actually be doing together. A consulting engagement, a fixed-scope product build, and grant-funded work are priced very differently. We figure out which one fits and quote it on your discovery call, not before.",
+          a: "It depends on what we'd actually be doing together. Ongoing consulting, building you a specific tool, and grant-funded work are priced very differently. We figure out what fits and give you a real number on our free call, not before.",
         },
         {
           q: 'How long does a typical project take?',
-          a: 'It depends on scope, but most engagements move from discovery to a working pilot in a matter of weeks, not months. We\'ll give you a real timeline once we understand what you need.',
+          a: "It depends on the scope, but most projects go from our first conversation to a working pilot in a matter of weeks, not months. We'll give you a real timeline once we understand what you need.",
         },
         {
           q: 'Do I need a technical team or a data scientist on staff?',
@@ -133,7 +133,7 @@ export const translations = {
         },
         {
           q: "I'm not sure what I actually need. Can you help with that?",
-          a: 'That\'s exactly what the discovery call is for. Try our interactive tools above, or just reach out. We\'ll ask a few questions and point you in the right direction.',
+          a: "That's exactly what the free call is for. Try our interactive tools above, or just reach out. We'll ask a few questions and point you in the right direction.",
         },
       ],
     },
@@ -141,12 +141,12 @@ export const translations = {
       eyebrow: 'Get In Touch',
       title: 'Ready to Get Started?',
       subtitle:
-        "Tell us about your business and what you're hoping to achieve. We'll reach out within one business day to schedule a free discovery call.",
+        "Tell us about your business and what you're hoping to achieve. We'll reach out within one business day to schedule a free call.",
       emailLabel: 'Email',
       phoneLabel: 'Phone',
       noCommitmentBold: 'No commitment required.',
       noCommitmentRest:
-        "Our discovery call is completely free: we'll assess your needs and tell you honestly what we can do for your business.",
+        "Our call is completely free: we'll take a look at your needs and tell you honestly what we can do for your business.",
       formTitle: 'Tell us about your business',
       nameLabel: 'Full Name *',
       namePlaceholder: 'Jane Smith',
@@ -157,11 +157,11 @@ export const translations = {
       serviceLabel: 'Service of Interest *',
       serviceDefault: 'Select a service...',
       services: [
-        'Analytics Products',
-        'Data Science Insights & Predictions',
-        'AI Integration & Custom Products',
-        'Operations Automation',
-        'Data Consulting',
+        'Dashboards & Reports',
+        'Smarter Predictions',
+        'Custom AI Tools',
+        'Automation',
+        'Guidance & Consulting',
         "I'm not sure yet",
       ],
       messageLabel: 'Tell us about your goals *',
@@ -170,11 +170,11 @@ export const translations = {
       send: 'Send Message',
       disclaimer: 'We respond within 1 business day. No spam, ever.',
       successTitle: 'Message Received!',
-      successBody: "Thanks, {name}! We'll reach out within one business day to schedule your free discovery call.",
+      successBody: "Thanks, {name}! We'll reach out within one business day to schedule your free call.",
       sendAnother: 'Send another message',
     },
     footer: {
-      tagline: 'Making AI and data practical and accessible for businesses in Puerto Rico.',
+      tagline: 'We make AI and data practical and accessible for businesses in Puerto Rico.',
       rights: 'All rights reserved.',
       location: 'Puerto Rico, USA',
     },
@@ -192,7 +192,7 @@ export const translations = {
         subtitle:
           'Watch how the bot guides a customer asking about services and pricing, without leaving them hanging, until they have all the info and their appointment is confirmed.',
         bullets: [
-          'No hallucinations: answers only from your data',
+          "Never makes things up: it only answers using your real information",
           'You update the knowledge, no developer needed',
           'Voice and tone tailored to your brand',
         ],
@@ -273,10 +273,10 @@ export const translations = {
         },
       },
       automation: {
-        eyebrow: 'n8n Automations',
-        title: 'Connect your tools, frictionlessly',
+        eyebrow: 'Automations',
+        title: 'Connect your tools, without the hassle',
         subtitle:
-          'Watch how information travels step by step. These are two examples of the kind of flow we build with n8n to connect WhatsApp, your inventory, your CRM, and AI, without touching any code.',
+          'Watch how information moves, step by step. These are two examples of the kind of automation we build to connect WhatsApp, your inventory, your CRM, and AI, without you touching any code.',
         demoLabel: 'Automatic Demo · {name}',
         doneText: 'Automation completed, no manual intervention',
         runningText: 'This flow runs on its own, 24/7, with no one needing to operate it manually.',
@@ -343,7 +343,7 @@ export const translations = {
             text: 'Before automating or predicting anything, you need clear visibility. A centralized dashboard gives you real insight into sales, customers, and operations in one place.',
           },
           {
-            title: 'Strategic Consulting Session',
+            title: 'A Consulting Session',
             text: 'It makes sense to start with a consulting session to map out where AI has the most impact in your business, and define a tailored automation or data plan.',
           },
         ],
@@ -366,44 +366,44 @@ export const translations = {
       titleStart: 'Convertimos Datos En',
       titleHighlight: 'Decisiones',
       subtitle:
-        'Ayudamos a pequeñas y medianas empresas en Puerto Rico a aprovechar el poder de la IA y los datos, sin la complejidad. Soluciones prácticas, resultados reales.',
-      ctaPrimary: 'Comienza Tu Camino',
-      ctaSecondary: 'Ver Servicios',
+        'Ayudamos a pequeñas y medianas empresas en Puerto Rico a poner la IA y los datos a trabajar para ellas, sin la complejidad. Soluciones prácticas, resultados reales.',
+      ctaPrimary: 'Hablemos',
+      ctaSecondary: 'Ver Nuestros Servicios',
     },
     services: {
       eyebrow: 'Qué Hacemos',
       title: 'Nuestros Servicios',
-      subtitle: 'Soluciones integrales de datos e IA diseñadas para negocios listos para crecer de forma más inteligente.',
+      subtitle: 'Ayuda práctica de datos e IA, pensada para negocios que quieren crecer.',
       items: [
         {
-          title: 'Productos de Analítica',
+          title: 'Dashboards y Reportes',
           description:
-            'Dashboards personalizados y herramientas de reportes que te dan una vista clara y en tiempo real de lo que más importa en tu negocio.',
-          tags: ['Dashboards', 'Seguimiento de KPIs', 'Visualización de Datos'],
+            'Dashboards sencillos que te muestran, en tiempo real, lo que realmente está pasando en tu negocio.',
+          tags: ['Dashboards', 'Reportes Sencillos', 'Gráficas y Visuales'],
         },
         {
-          title: 'Insights y Predicciones con Ciencia de Datos',
+          title: 'Predicciones Más Inteligentes',
           description:
-            'Transforma datos crudos de tu negocio en predicciones accionables, desde pronóstico de demanda hasta análisis de comportamiento del cliente.',
-          tags: ['Pronósticos', 'Modelos de ML', 'Análisis de Tendencias'],
+            'Convertimos los datos de tu negocio en predicciones sencillas, como saber qué esperar el próximo mes o qué quieren tus clientes.',
+          tags: ['Pronósticos', 'Tendencias', 'Predicciones'],
         },
         {
-          title: 'Integración de IA y Productos a la Medida',
+          title: 'Herramientas de IA a la Medida',
           description:
-            'Herramientas de IA diseñadas para tus flujos de trabajo: chatbots, motores de recomendación, procesadores de documentos y más.',
-          tags: ['IA Generativa', 'Apps con LLM', 'Herramientas a la Medida'],
+            'Herramientas de IA construidas alrededor de cómo ya trabajas: chatbots que atienden a tus clientes, herramientas que leen documentos por ti, y más.',
+          tags: ['Chatbots', 'Asistentes de IA', 'Herramientas a la Medida'],
         },
         {
-          title: 'Automatización de Operaciones',
+          title: 'Automatización',
           description:
-            'Elimina tareas manuales repetitivas con automatización inteligente que ahorra tiempo, reduce errores y crece contigo.',
-          tags: ['Automatización de Procesos', 'Flujos de Trabajo', 'Integración'],
+            'Te quitamos de encima las tareas repetitivas y manuales, ahorrándote tiempo y reduciendo errores.',
+          tags: ['Automatización', 'Ahorra Tiempo', 'Menos Errores'],
         },
         {
-          title: 'Consultoría de Datos',
+          title: 'Guía y Consultoría',
           description:
-            'Guía estratégica para construir tu infraestructura de datos y hoja de ruta, para que cada decisión tecnológica te lleve hacia adelante.',
-          tags: ['Estrategia', 'Arquitectura', 'Hoja de Ruta'],
+            '¿No sabes por dónde empezar? Te ayudamos a decidir qué hacer primero, y te acompañamos en cada decisión.',
+          tags: ['Guía', 'Planificación', 'Próximos Pasos'],
         },
       ],
       notSure: '¿No sabes qué necesitas?',
@@ -412,51 +412,51 @@ export const translations = {
     about: {
       eyebrow: 'Nuestra Misión',
       title: 'Tu Socio Local de IA y Datos',
-      p1: 'Paradis Technology existe para ayudar a comerciantes pequeños y medianos (aquí en Puerto Rico, y más allá) a mantenerse al día con las tendencias actuales de inteligencia artificial y tecnología, sin pagar el precio de un gran proveedor corporativo.',
-      p2: 'Adaptamos cada solución a cómo realmente funciona tu negocio, no al revés. Esa flexibilidad es lo que le permite a un negocio local acceder a herramientas del mismo calibre que una gran empresa, a una fracción del costo, y construidas alrededor de lo que de verdad necesitas.',
+      p1: 'Creamos Paradis Technology para ayudar a comerciantes pequeños y medianos, aquí en Puerto Rico y más allá, a mantenerse al día con la inteligencia artificial y la tecnología de hoy, sin pagar precios de gran corporación.',
+      p2: 'Construimos cada solución alrededor de cómo realmente funciona tu negocio, no al revés. Eso es lo que le permite a un negocio local tener herramientas de la misma calidad que una gran empresa, a una fracción del costo, y hechas para lo que de verdad necesitas.',
       badge: 'Enfocados en Puerto Rico, sirviendo negocios en todo Estados Unidos',
       differentTitle: 'Qué Nos Hace Diferentes',
       differentiators: [
         'No necesitas un título en ciencia de datos: hablamos tu idioma',
-        'IA y automatización de nivel empresarial, a precios para pequeños y medianos negocios',
-        'Cada solución se adapta a cómo funciona tu negocio, no un paquete rígido de talla única',
+        'La misma calidad de IA y automatización que usan las grandes empresas, a precios para pequeños y medianos negocios',
+        'Cada solución se adapta a cómo funciona tu negocio, no un paquete de talla única',
         'Equipo basado en Puerto Rico que entiende el mercado local',
         'Una relación continua, no un proyecto de una sola vez',
       ],
-      founderHeading: 'Quién Está Detrás de Paradis',
+      founderHeading: 'El Equipo Detrás de Paradis',
       founderParagraphs: [
-        'Detrás de Paradis hay un científico de datos con una maestría en Data Science y una base en Matemática Aplicada y Física: una formación pensada para la precisión, no para las corazonadas.',
-        'Esa base se ha puesto a prueba en seguros de salud, finanzas, educación, operaciones de pago y mercadeo digital, construyendo modelos de machine learning, modelos estadísticos y productos impulsados por IA que convierten datos en decisiones reales de negocio, no solo en reportes.',
-        'Hoy, ese mismo rigor se traduce en la creación de productos de machine learning que aumentan la eficiencia a nivel corporativo en distintos departamentos del negocio. Es el mismo estándar detrás de cada solución que entrega Paradis: construida para funcionar en condiciones reales, no solo para verse bien en una demo.',
+        'Nuestro equipo tiene formación en ciencia de datos, con una maestría en Data Science y una base en Matemática Aplicada y Física. Eso significa que nuestro trabajo está construido sobre precisión, no sobre corazonadas.',
+        'Hemos puesto esa base a prueba en seguros de salud, finanzas, educación, procesamiento de pagos y mercadeo digital, construyendo herramientas que convierten datos en decisiones reales, no solo en reportes.',
+        'Hoy, llevamos ese mismo cuidado a cada herramienta de IA que construimos, ya sea para un negocio pequeño o una empresa más grande. Es el mismo estándar detrás de todo lo que entrega Paradis: construido para funcionar en el mundo real, no solo para verse bien en una demo.',
       ],
     },
     process: {
       eyebrow: 'Cómo Funciona',
       title: 'Nuestro Proceso',
-      subtitle: 'Un marco de cuatro pasos probado que te lleva de la incertidumbre a los resultados.',
+      subtitle: 'Cuatro pasos sencillos que te llevan de no saber por dónde empezar, a resultados reales.',
       steps: [
         {
           title: 'Descubrimiento',
           description:
-            'Comenzamos con un análisis profundo de tu negocio, entendiendo tus metas, fuentes de datos, puntos de dolor y cómo se ve el éxito para ti.',
+            'Empezamos por conocer tu negocio: tus metas, qué datos tienes, qué te está frustrando, y cómo se vería el éxito para ti.',
         },
         {
-          title: 'Estrategia y Hoja de Ruta',
+          title: 'El Plan',
           description:
-            'Creamos una hoja de ruta clara y priorizada, adaptada a tu presupuesto y tiempo, sin alcance inflado, solo los movimientos de mayor impacto primero.',
+            'Armamos un plan claro que se ajusta a tu presupuesto y tiempo, empezando por lo que va a hacer la mayor diferencia primero.',
         },
         {
           title: 'Construcción e Integración',
           description:
-            'Nuestro equipo diseña y construye tu solución (dashboards, modelos o automatizaciones) y la integra sin fricción a tus herramientas y flujos existentes.',
+            'Nuestro equipo construye tu solución, ya sea un dashboard, una herramienta o una automatización, y la conecta sin problemas con lo que ya usas.',
         },
         {
           title: 'Lanzamiento y Optimización',
           description:
-            'Lanzamos, entrenamos a tu equipo y te acompañamos, midiendo resultados e iterando para que tu inversión siga dando frutos a largo plazo.',
+            'Lo lanzamos, entrenamos a tu equipo, y nos quedamos cerca, revisando resultados y haciendo ajustes para que tu inversión siga dando frutos.',
         },
       ],
-      cta: 'Comienza con una Llamada de Descubrimiento Gratis',
+      cta: 'Agenda una Llamada Gratis',
     },
     faq: {
       eyebrow: 'Preguntas',
@@ -465,11 +465,11 @@ export const translations = {
       items: [
         {
           q: '¿Cuánto cuesta esto?',
-          a: 'Depende de qué vayamos a hacer juntos. Una consultoría, el desarrollo de un producto de alcance fijo, y un proyecto financiado por subvención tienen precios muy distintos. Definimos cuál aplica y te damos una cotización en la llamada de descubrimiento, no antes.',
+          a: 'Depende de qué vayamos a hacer juntos. Una consultoría continua, construirte una herramienta específica, o un proyecto financiado por subvención tienen precios muy distintos. Definimos qué aplica y te damos un número real en la llamada gratis, no antes.',
         },
         {
           q: '¿Cuánto tiempo toma un proyecto típico?',
-          a: 'Depende del alcance, pero la mayoría de los proyectos pasan del descubrimiento a un piloto funcional en cuestión de semanas, no meses. Te damos un tiempo real una vez entendamos qué necesitas.',
+          a: 'Depende del alcance, pero la mayoría de los proyectos pasan de la primera conversación a un piloto funcional en cuestión de semanas, no meses. Te damos un tiempo real una vez entendamos qué necesitas.',
         },
         {
           q: '¿Necesito un equipo técnico o un científico de datos en mi negocio?',
@@ -485,7 +485,7 @@ export const translations = {
         },
         {
           q: 'No estoy seguro/a de qué necesito. ¿Me pueden ayudar con eso?',
-          a: 'Para eso es exactamente la llamada de descubrimiento. Prueba nuestras herramientas interactivas arriba, o simplemente escríbenos. Te haremos algunas preguntas y te orientamos.',
+          a: 'Para eso es exactamente la llamada gratis. Prueba nuestras herramientas interactivas arriba, o simplemente escríbenos. Te haremos algunas preguntas y te orientamos.',
         },
       ],
     },
@@ -493,12 +493,12 @@ export const translations = {
       eyebrow: 'Contáctanos',
       title: '¿Listo para Comenzar?',
       subtitle:
-        'Cuéntanos sobre tu negocio y lo que esperas lograr. Te contactaremos dentro de un día laborable para agendar una llamada de descubrimiento gratuita.',
+        'Cuéntanos sobre tu negocio y lo que esperas lograr. Te contactaremos dentro de un día laborable para agendar tu llamada gratis.',
       emailLabel: 'Correo',
       phoneLabel: 'Teléfono',
       noCommitmentBold: 'Sin compromiso.',
       noCommitmentRest:
-        'Nuestra llamada de descubrimiento es completamente gratis: evaluaremos tus necesidades y te diremos honestamente qué podemos hacer por tu negocio.',
+        'Nuestra llamada es completamente gratis: revisamos tus necesidades y te decimos honestamente qué podemos hacer por tu negocio.',
       formTitle: 'Cuéntanos sobre tu negocio',
       nameLabel: 'Nombre Completo *',
       namePlaceholder: 'Jane Smith',
@@ -509,11 +509,11 @@ export const translations = {
       serviceLabel: 'Servicio de Interés *',
       serviceDefault: 'Selecciona un servicio...',
       services: [
-        'Productos de Analítica',
-        'Insights y Predicciones con Ciencia de Datos',
-        'Integración de IA y Productos a la Medida',
-        'Automatización de Operaciones',
-        'Consultoría de Datos',
+        'Dashboards y Reportes',
+        'Predicciones Más Inteligentes',
+        'Herramientas de IA a la Medida',
+        'Automatización',
+        'Guía y Consultoría',
         'No estoy seguro/a todavía',
       ],
       messageLabel: 'Cuéntanos tus objetivos *',
@@ -522,7 +522,7 @@ export const translations = {
       send: 'Enviar Mensaje',
       disclaimer: 'Respondemos dentro de 1 día laborable. Sin spam, nunca.',
       successTitle: '¡Mensaje Recibido!',
-      successBody: '¡Gracias, {name}! Te contactaremos dentro de un día laborable para agendar tu llamada de descubrimiento gratuita.',
+      successBody: '¡Gracias, {name}! Te contactaremos dentro de un día laborable para agendar tu llamada gratis.',
       sendAnother: 'Enviar otro mensaje',
     },
     footer: {
@@ -544,8 +544,8 @@ export const translations = {
         subtitle:
           'Observa cómo el bot guía a un cliente que pregunta por servicios y precios, sin dejarlo a medias, hasta que tiene toda la información y su cita queda confirmada.',
         bullets: [
-          'Sin alucinaciones: responde solo con tu data',
-          'Tú actualizas el conocimiento, sin depender de un dev',
+          'Nunca se inventa las respuestas: solo contesta con tu información real',
+          'Tú actualizas la información, sin depender de un programador',
           'Voz y tono a la medida de tu marca',
         ],
         demoLabel: 'Demo automático · {name}',
@@ -625,10 +625,10 @@ export const translations = {
         },
       },
       automation: {
-        eyebrow: 'Automatizaciones n8n',
+        eyebrow: 'Automatizaciones',
         title: 'Conecta tus herramientas, sin fricción',
         subtitle:
-          'Observa cómo viaja la información paso a paso. Estos son dos ejemplos del tipo de flujo que construimos con n8n para conectar WhatsApp, tu inventario, tu CRM y la IA, sin que tengas que tocar código.',
+          'Observa cómo viaja la información, paso a paso. Estos son dos ejemplos del tipo de automatización que construimos para conectar WhatsApp, tu inventario, tu CRM y la IA, sin que tengas que tocar código.',
         demoLabel: 'Demo automático · {name}',
         doneText: 'Automatización completada, sin intervención manual',
         runningText: 'Este flujo corre solo, 24/7, sin que nadie lo tenga que operar manualmente.',
@@ -695,7 +695,7 @@ export const translations = {
             text: 'Antes de automatizar o predecir nada, necesitas ver claro. Un dashboard centralizado te da visibilidad real de ventas, clientes y operación en un solo lugar.',
           },
           {
-            title: 'Sesión de Consultoría Estratégica',
+            title: 'Una Sesión de Consultoría',
             text: 'Tiene sentido empezar con una sesión de consultoría para mapear dónde la IA rinde más en tu negocio, y definir un plan de automatización o de datos a la medida.',
           },
         ],
