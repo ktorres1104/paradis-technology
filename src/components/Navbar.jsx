@@ -44,7 +44,7 @@ export default function Navbar() {
         >
           <PalmLogo size={36} />
           <span className="font-display font-bold text-[#14181a] text-lg tracking-tight">
-            Paradis <span className="text-[#161f5c]">Technology</span>
+            Paradise <span className="text-[#161f5c]">Technology</span>
           </span>
         </a>
 

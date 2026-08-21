@@ -60,7 +60,7 @@ export const translations = {
     about: {
       eyebrow: 'Our Mission',
       title: 'Your Local AI & Data Partner',
-      p1: "We started Paradis Technology to help small and medium businesses, here in Puerto Rico and beyond, keep up with today's AI and technology, without paying big-corporation prices.",
+      p1: "We started Paradise Technology to help small and medium businesses, here in Puerto Rico and beyond, keep up with today's AI and technology, without paying big-corporation prices.",
       p2: "We build every solution around how your business actually works, not the other way around. That's what lets a local shop get the same quality of tools as a big company, at a fraction of the cost, made around what you actually need.",
       badge: 'Focused on Puerto Rico, serving businesses across the U.S.',
       differentTitle: 'What Makes Us Different',
@@ -71,11 +71,11 @@ export const translations = {
         'Puerto Rico–based team that understands the local market',
         'Ongoing partnership, not a one-time project',
       ],
-      founderHeading: 'The Team Behind Paradis',
+      founderHeading: 'The Team Behind Paradise',
       founderParagraphs: [
         'Our team is trained in Applied Mathematics, Engineering, and Data Science, with graduate-level studies. That means our work is built on precision, not guesswork.',
         "We've put that foundation to work across health insurance, finance, education, payment processing, and digital marketing, building tools that turn data into real decisions, not just reports.",
-        "Today, we bring that same care into every AI tool we build, whether it's for a small business or a larger company. It's the same standard behind everything Paradis delivers: built to work in the real world, not just look good in a demo.",
+        "Today, we bring that same care into every AI tool we build, whether it's for a small business or a larger company. It's the same standard behind everything Paradise delivers: built to work in the real world, not just look good in a demo.",
       ],
     },
     process: {
@@ -412,7 +412,7 @@ export const translations = {
     about: {
       eyebrow: 'Nuestra Misión',
       title: 'Tu Socio Local de IA y Datos',
-      p1: 'Creamos Paradis Technology para ayudar a comerciantes pequeños y medianos, aquí en Puerto Rico y más allá, a mantenerse al día con la inteligencia artificial y la tecnología de hoy, sin pagar precios de gran corporación.',
+      p1: 'Creamos Paradise Technology para ayudar a comerciantes pequeños y medianos, aquí en Puerto Rico y más allá, a mantenerse al día con la inteligencia artificial y la tecnología de hoy, sin pagar precios de gran corporación.',
       p2: 'Construimos cada solución alrededor de cómo realmente funciona tu negocio, no al revés. Eso es lo que le permite a un negocio local tener herramientas de la misma calidad que una gran empresa, a una fracción del costo, y hechas para lo que de verdad necesitas.',
       badge: 'Enfocados en Puerto Rico, sirviendo negocios en todo Estados Unidos',
       differentTitle: 'Qué Nos Hace Diferentes',
@@ -423,11 +423,11 @@ export const translations = {
         'Equipo basado en Puerto Rico que entiende el mercado local',
         'Una relación continua, no un proyecto de una sola vez',
       ],
-      founderHeading: 'El Equipo Detrás de Paradis',
+      founderHeading: 'El Equipo Detrás de Paradise',
       founderParagraphs: [
         'Nuestro equipo está formado en Matemática Aplicada, Ingeniería y Ciencia de Datos, con estudios graduados. Eso significa que nuestro trabajo está construido sobre precisión, no sobre suposiciones.',
         'Hemos puesto esa base a prueba en seguros de salud, finanzas, educación, procesamiento de pagos y mercadeo digital, construyendo herramientas que convierten datos en decisiones reales, no solo en reportes.',
-        'Hoy, llevamos ese mismo cuidado a cada herramienta de IA que construimos, ya sea para un negocio pequeño o una empresa más grande. Es el mismo estándar detrás de todo lo que entrega Paradis: construido para funcionar en el mundo real, no solo para verse bien en una demo.',
+        'Hoy, llevamos ese mismo cuidado a cada herramienta de IA que construimos, ya sea para un negocio pequeño o una empresa más grande. Es el mismo estándar detrás de todo lo que entrega Paradise: construido para funcionar en el mundo real, no solo para verse bien en una demo.',
       ],
     },
     process: {

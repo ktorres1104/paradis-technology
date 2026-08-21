@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 justify-center md:justify-start">
               <PalmLogo size={32} />
               <span className="font-display font-bold text-[#14181a] text-base tracking-tight">
-                Paradis <span className="text-[#161f5c]">Technology</span>
+                Paradise <span className="text-[#161f5c]">Technology</span>
               </span>
             </div>
             <p className="mt-2 text-[#75797d] text-sm max-w-xs">
@@ -58,7 +58,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-[#dadfdc] flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#8a8e93]">
-            © {new Date().getFullYear()} Paradis Technology. {t.footer.rights}
+            © {new Date().getFullYear()} Paradise Technology. {t.footer.rights}
           </p>
           <p className="text-xs text-[#8a8e93]">
             {t.footer.location}
