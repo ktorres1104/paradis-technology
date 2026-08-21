@@ -53,6 +53,12 @@ export const translations = {
             "Not sure where to start? We help you figure out what to do first, and stick with you through every decision.",
           tags: ['Guidance', 'Planning', 'Next Steps'],
         },
+        {
+          title: 'Websites',
+          description:
+            'We design and build websites for your business, simple, professional, and made to actually bring in customers.',
+          tags: ['Web Design', 'Custom Sites', 'Fast & Simple'],
+        },
       ],
       notSure: 'Not sure what you need?',
       talkGoals: "Let's talk about your goals.",
@@ -162,6 +168,7 @@ export const translations = {
         'Custom AI Tools',
         'Automation',
         'Guidance & Consulting',
+        'Websites',
         "I'm not sure yet",
       ],
       messageLabel: 'Tell us about your goals *',
@@ -405,6 +412,12 @@ export const translations = {
             '¿No sabes por dónde empezar? Te ayudamos a decidir qué hacer primero, y te acompañamos en cada decisión.',
           tags: ['Guía', 'Planificación', 'Próximos Pasos'],
         },
+        {
+          title: 'Páginas de Internet',
+          description:
+            'Diseñamos y construimos páginas de internet para tu negocio, sencillas, profesionales, y hechas para atraer clientes de verdad.',
+          tags: ['Diseño Web', 'Páginas a la Medida', 'Rápido y Sencillo'],
+        },
       ],
       notSure: '¿No sabes qué necesitas?',
       talkGoals: 'Hablemos de tus objetivos.',
@@ -514,6 +527,7 @@ export const translations = {
         'Herramientas de IA a la Medida',
         'Automatización',
         'Guía y Consultoría',
+        'Páginas de Internet',
         'No estoy seguro/a todavía',
       ],
       messageLabel: 'Cuéntanos tus objetivos *',

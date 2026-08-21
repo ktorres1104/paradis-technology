@@ -6,10 +6,11 @@ import {
   HiCpuChip,
   HiCog6Tooth,
   HiClipboardDocumentList,
+  HiGlobeAlt,
 } from 'react-icons/hi2'
 import { useLanguage } from '../i18n/LanguageContext'
 
-const icons = [HiChartBar, HiLightBulb, HiCpuChip, HiCog6Tooth, HiClipboardDocumentList]
+const icons = [HiChartBar, HiLightBulb, HiCpuChip, HiCog6Tooth, HiClipboardDocumentList, HiGlobeAlt]
 
 const container = {
   hidden: {},
@@ -53,16 +54,13 @@ export default function Services() {
           animate={inView ? 'show' : 'hidden'}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map((svc, i) => {
+          {services.map((svc) => {
             const Icon = svc.icon
-            const isLast = i === services.length - 1
             return (
               <motion.div
                 key={svc.title}
                 variants={cardVariant}
-                className={`group relative p-7 rounded-lg border border-[#dadfdc] bg-white hover:border-[#161f5c]/30 transition-all duration-300 cursor-default ${
-                  isLast ? 'md:col-start-auto lg:col-start-2' : ''
-                }`}
+                className="group relative p-7 rounded-lg border border-[#dadfdc] bg-white hover:border-[#161f5c]/30 transition-all duration-300 cursor-default"
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
               >
